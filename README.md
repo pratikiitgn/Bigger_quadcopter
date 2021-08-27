@@ -3,8 +3,11 @@
 
 ## For Ardupilot Customizable controller
 
-link to page - https://ardupilot.org/dev/docs/building-setup-linux.html
+Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html\
+
 To clean ardupilot stack - ./waf clean
+
+
 
 ## To make a launcher icon in Ubuntu
 
