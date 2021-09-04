@@ -3,7 +3,7 @@
 
 ## For Ardupilot Customizable controller
 
-Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html\
+Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
 
 To clean ardupilot stack - ./waf clean\
 
