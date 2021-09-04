@@ -39,6 +39,15 @@ Icon = (provide oath of your application's icon)
     $ mkdire git_workspace
 5) Open git_workspace in terminal and clone the repositary\
     $ git clone (url of your repository)
+6) Now, make a file in your repository in ubuntu
+    $ touch test.txt
+7) To check the status of GitHub repository
+    $ git status
+8) To add file over the github account
+    $ git add (name_of_filename)
+    $ git commit -m "add here your comments" (name_of_your_file)
+    $ git push -u origin master
+    Then after apply your username and password
     
     
 ## Some Ubuntu Shortcuts
@@ -46,4 +55,3 @@ Icon = (provide oath of your application's icon)
 1) To check the working directory - $ pwd
 2) To list down all the directories - $ ls -al
 3) To open a file - $ gedit (name of file)
-4) 
