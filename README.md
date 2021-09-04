@@ -15,19 +15,15 @@
 
 1) To download Ardupilot repo\
     $ git clone --recursive https://github.com/ArduPilot/ardupilot.git
-2) Go to ardupilot directory and type following code to build the fmv3 version\
-    ```
-    $ ./waf configure --board fmuv3\
-    ```
-    After successfully 
-2) To make specific type of build 
-    $ ./waf configure --board (name of board)
-3) To complile the code 
-    $ ./waf (name_of_board)
-4) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
-5) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
-6) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it\
-    $ ./waf configure --board fmuv3
+2) Go to ardupilot directory and type following code to build the fmv3 version ```./waf configure --board fmuv3```\
+    After successfully building it you will see fmv3 named foled in build directory
+
+### Useful notes
+
+
+1) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
+2) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
+
 
 ## To make a launcher icon in Ubuntu
 
@@ -35,6 +31,7 @@
 2) Download suitable icon for the app and put these two files in specific folder
 3) make a desktop file by command $ sudo nano /usr/share/applications/(name of application).desktop
 4) Paste following commands it\
+```
 #!/usr/bin/env xdg-open\
 [Desktop Entry]\
 Version=1.0\
@@ -44,7 +41,8 @@ Exec=(provide path of your app location)\
 Name = (provide name of your app)\
 Comment = (Provide description of your app)\
 Icon = (provide oath of your application's icon)
-5) Make file executable by $ sudo chmod +x /usr/share/applications/(name of application).desktop
+```
+5) Make file executable by ```sudo chmod +x /usr/share/applications/(name of application).desktop```
 
 
 ## Getting started with Git
@@ -72,6 +70,6 @@ Icon = (provide oath of your application's icon)
     
 ## Some Ubuntu Shortcuts
 
-1) To check the working directory - $ pwd
-2) To list down all the directories - $ ls -al
-3) To open a file - $ gedit (name of file)
+1) To check the working directory -  ```pwd```
+2) To list down all the directories - ```ls -al```
+3) To open a file - ```gedit (name of file)```
