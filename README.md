@@ -19,7 +19,7 @@
     $ ./waf (name_of_board)
 3) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
 4) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
-5) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it
+5) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it\
     $ ./waf configure --board fmuv3
 
 ## To make a launcher icon in Ubuntu
