@@ -4,7 +4,7 @@
 ## For Ardupilot Customizable controller
 
 1) Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
-2) To clean ardupilot stack - ./waf clean
+2) To clean ardupilot github repository on Ubuntu - ./waf distclean
 3) Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
 4) Ardupilot Libraries for sensors, controller - https://ardupilot.org/dev/docs/apmcopter-programming-libraries.html
 
