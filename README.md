@@ -16,9 +16,9 @@
 1) To download Ardupilot repo\
     $ git clone --recursive https://github.com/ArduPilot/ardupilot.git
 2) Go to ardupilot directory and type following code to build the fmv3 version\
-    ...
+    ```
     $ ./waf configure --board fmuv3\
-    ...
+    ```
     After successfully 
 2) To make specific type of build 
     $ ./waf configure --board (name of board)
