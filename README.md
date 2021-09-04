@@ -6,9 +6,10 @@
 ### Usefull links
 
 1) Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
-2) To clean ardupilot github repository on Ubuntu - ./waf distclean
+2) To clean ardupilot github repository on Ubuntu $ ./waf distclean
 3) Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
 4) Ardupilot Libraries for sensors, controller - https://ardupilot.org/dev/docs/apmcopter-programming-libraries.html
+5) Link to build the code - https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md
 
 ### Getting started with Ardupilot code
 
@@ -18,6 +19,8 @@
     $ ./waf (name_of_board)
 3) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
 4) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
+5) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it
+    $ ./waf configure --board fmuv3
 
 ## To make a launcher icon in Ubuntu
 
