@@ -44,9 +44,9 @@ Icon = (provide oath of your application's icon)
 7) To check the status of GitHub repository
     $ git status
 8) To add file over the github account
-    $ git add (name_of_filename)
-    $ git commit -m "add here your comments" (name_of_your_file)
-    $ git push -u origin master
+    $ git add (name_of_filename)\
+    $ git commit -m "add here your comments" (name_of_your_file)\
+    $ git push -u origin master\
     Then after apply your username and password
     
     
