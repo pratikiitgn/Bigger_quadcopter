@@ -35,3 +35,8 @@ Icon = (provide oath of your application's icon)
     $ git config --global user.email "pkprajapati5959@gmail.com"
 3) To check the configuration \
     $ git config --list
+    
+    
+## Some Ubuntu Shortcuts
+
+1) To check the working directory - $pwd
