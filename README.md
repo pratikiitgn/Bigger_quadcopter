@@ -3,11 +3,11 @@
 
 ## For Ardupilot Customizable controller
 
-Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
+1) Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
+2) To clean ardupilot stack - ./waf clean
+3) Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
+4) Ardupilot Libraries for sensors, controller - https://ardupilot.org/dev/docs/apmcopter-programming-libraries.html
 
-To clean ardupilot stack - ./waf clean
-
-Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
 
 ## To make a launcher icon in Ubuntu
 
