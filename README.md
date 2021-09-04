@@ -43,7 +43,7 @@
 * txspace - check how much outgoing buffer space is available
 * get_flow_control - check if the UART has flow control capabilities
 
-3) Pinlayout - [+5v], []
+3) Pinlayout -GPS pin- [+5v], [TX], [RX], [CAN2 TX], [CAN2RX], [GND]
 
 ### Useful notes
 
