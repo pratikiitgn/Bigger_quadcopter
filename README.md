@@ -25,3 +25,13 @@ Name = (provide name of your app)\
 Comment = (Provide description of your app)\
 Icon = (provide oath of your application's icon)\
 5) Make file executable by $ sudo chmod +x /usr/share/applications/(name of application).desktop\
+
+
+## Getting started with Git
+
+1) Make a github account and install git on ubuntu machine\
+2) Configure with this code on terminal - \
+    $ git config --global user.name "pratikiitgn"\
+    $ git config --global user.email "pkprajapati5959@gmail.com"\
+3) To check the configuration 
+    $ git config --list
