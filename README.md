@@ -13,13 +13,15 @@
 
 ### Getting started with Ardupilot code
 
-1) To make specific type of build 
+1) To download Ardupilot repo\
+    $ git clone --recursive https://github.com/ArduPilot/ardupilot.git
+2) To make specific type of build 
     $ ./waf configure --board (name of board)
-2) To complile the code 
+3) To complile the code 
     $ ./waf (name_of_board)
-3) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
-4) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
-5) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it\
+4) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
+5) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
+6) We are using Pixhawk 2.4.8 hence, we will be using following command to configure it\
     $ ./waf configure --board fmuv3
 
 ## To make a launcher icon in Ubuntu
