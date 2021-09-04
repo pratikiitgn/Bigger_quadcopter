@@ -5,7 +5,7 @@
 
 Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
 
-To clean ardupilot stack - ./waf clean\
+To clean ardupilot stack - ./waf clean
 
 Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html\
 
