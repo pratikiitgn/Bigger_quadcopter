@@ -24,7 +24,7 @@
 ### UART Ports on Ardupilot
 
 1) Followings are the 
-*** uartA - the console (usually USB, runs MAVLink telemetry)
+***uartA - the console (usually USB, runs MAVLink telemetry)
 *** uartB - the first GPS
 *** uartC - primary telemetry (telem1 on most autopilots)
 *** uartD - secondary telemetry (telem2 on most autopilots)
