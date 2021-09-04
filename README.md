@@ -3,11 +3,21 @@
 
 ## For Ardupilot Customizable controller
 
+### Usefull links
+
 1) Main webpage for developer- https://ardupilot.org/dev/docs/building-setup-linux.html
 2) To clean ardupilot github repository on Ubuntu - ./waf distclean
 3) Learning base code - https://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
 4) Ardupilot Libraries for sensors, controller - https://ardupilot.org/dev/docs/apmcopter-programming-libraries.html
 
+### Getting started with Ardupilot code
+
+1) To make specific type of build 
+    $ ./waf configure --board (name of board)
+2) To complile the code 
+    $ ./waf (name_of_board)
+3) The "_with_bl.hex": file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
+4) The "..apj" is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
 
 ## To make a launcher icon in Ubuntu
 
