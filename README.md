@@ -35,8 +35,15 @@ Icon = (provide oath of your application's icon)
     $ git config --global user.email "pkprajapati5959@gmail.com"
 3) To check the configuration \
     $ git config --list
+4) Make a directory for git in home \
+    $ mkdire git_workspace
+5) Open git_workspace in terminal and clone the repositary\
+    $ git clone (url of your repository)
     
     
 ## Some Ubuntu Shortcuts
 
-1) To check the working directory - $pwd
+1) To check the working directory - $ pwd
+2) To list down all the directories - $ ls -al
+3) To open a file - $ gedit (name of file)
+4) 
