@@ -16,8 +16,8 @@
     $ ./waf configure --board (name of board)
 2) To complile the code 
     $ ./waf (name_of_board)
-3) The "_with_bl.hex": file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
-4) The "..apj" is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
+3) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
+4) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
 
 ## To make a launcher icon in Ubuntu
 
