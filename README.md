@@ -23,15 +23,25 @@
 
 ### UART Ports on Ardupilot
 
-1) Followings are the 
+1) Followings are the UART ports on the Pixhawk
 * uartA - the console (usually USB, runs MAVLink telemetry)
 * uartB - the first GPS
 * uartC - primary telemetry (telem1 on most autopilots)
 * uartD - secondary telemetry (telem2 on most autopilots)
-* uartE - 2nd GPS
+* uartE - 2nd GPS (Serial 4/5)
 * uartF - User Configurable
 * uartG - User Configurable
 * uartH - User Configurable
+
+2) Some basic codes
+* printf - formatted print
+* printf_P - formatted print with progmem string (saves memory on AVR boards)
+* println - print and line feed
+* write - write a bunch of bytes
+* read - read some bytes
+* available - check if any bytes are waiting
+* txspace - check how much outgoing buffer space is available
+* get_flow_control - check if the UART has flow control capabilities
 
 ### Useful notes
 
