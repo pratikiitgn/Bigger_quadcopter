@@ -17,7 +17,7 @@
     $ git clone --recursive https://github.com/ArduPilot/ardupilot.git
 2) Go to ardupilot directory and type following code to build the fmv3 version\
     ```./waf configure --board fmuv3```\
-    After successfully building it you will see fmv3 named folder in build directory. After that paste\
+    After successfully building it you will see fmv3 named folder in build directory. After that run following code to burn on Pixhawk\
     ```./waf copter```
 
 
