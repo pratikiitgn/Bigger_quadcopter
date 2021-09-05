@@ -21,17 +21,17 @@
 3) To upload the code on the Pixhawk use following code in ardupilot main directory\
     ``` ./waf --targets bin/arducopter --upload```
 
-### UART Ports on Ardupilot
+### UART Ports on Ardupilot https://ardupilot.org/dev/docs/learning-ardupilot-uarts-and-the-console.html
 
 1) Followings are the UART ports on the Pixhawk
-* uartA - the console (usually USB, runs MAVLink telemetry)
-* uartB - the first GPS
-* uartC - primary telemetry (telem1 on most autopilots)
-* uartD - secondary telemetry (telem2 on most autopilots)
-* uartE - 2nd GPS (Serial 4/5)
-* uartF - User Configurable
-* uartG - User Configurable
-* uartH - User Configurable
+* uartA - the console (usually USB, runs MAVLink telemetry) (Serial 0)
+* uartB - the first GPS  (Serial 3) [+5v], [TX], [RX], [CAN2 TX], [CAN2RX], [GND]
+* uartC - primary telemetry (telem1 on most autopilots)  (Serial 1) [+5v], [TX], [RX], [CTS], [RTS], [GND]
+* uartD - secondary telemetry (telem2 on most autopilots)  (Serial 2) [+5v], [TX], [RX], [CTS], [RTS], [GND]
+* uartE - 2nd GPS (Serial 4/5)  (Serial 4 and 5) [5v], [TX4], [RX4], [TX5], [RX5], [GND]
+* uartF - User Configurable  (Serial 0)
+* uartG - User Configurable  (Serial 0)
+* uartH - User Configurable  (Serial 0)
 
 2) Some basic codes
 * printf - formatted print
@@ -42,8 +42,6 @@
 * available - check if any bytes are waiting
 * txspace - check how much outgoing buffer space is available
 * get_flow_control - check if the UART has flow control capabilities
-
-3) Pinlayout -GPS pin- [+5v], [TX], [RX], [CAN2 TX], [CAN2RX], [GND]
 
 ### Useful notes
 
