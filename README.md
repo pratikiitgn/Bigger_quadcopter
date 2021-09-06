@@ -44,7 +44,8 @@
 1) First Goto Px4_developer-> Firmware -> build -> px4_fmu-v3_default -> src -> examples
 2) Make a directory named [px4_simple_app]. Paste the following basic code
 
-``` #include <px4_platform_common/log.h>
+``` 
+#include <px4_platform_common/log.h>
 
 __EXPORT int px4_simple_app_main(int argc, char *argv[]);
 
@@ -52,7 +53,8 @@ int px4_simple_app_main(int argc, char *argv[])
 {
     PX4_INFO("Hello Sky!");
     return OK;
-}```
+}
+```
 
 
 ## For Ardupilot Customizable controller
