@@ -42,7 +42,7 @@
 ### Making first application
 
 1) First Goto Px4_developer-> Firmware -> build -> px4_fmu-v3_default -> src -> examples
-2) Make a directory named [px4_simple_app]. Paste the following basic code
+2) Make a directory named [px4_simple_app]. Make a .c file named [px4_simple_app.c] and paste the following basic code
 
 ``` 
 #include <px4_platform_common/log.h>
@@ -55,6 +55,22 @@ int px4_simple_app_main(int argc, char *argv[])
     return OK;
 }
 ```
+
+3) Create and open a new cmake definition file named CMakeLists.txt. Copy in the text below:
+
+```
+px4_add_module(
+    MODULE examples__px4_simple_app
+    MAIN px4_simple_app
+    STACK_MAIN 2000
+    SRCS
+        px4_simple_app.c
+    DEPENDS
+    )
+```
+
+4) Now go to Px4_developer-> Firmware -> boards -> px4 -> fmu-v3 -> open default.cmake file. and enter following line of code in it\
+```examples/px4_simple_app```
 
 
 ## For Ardupilot Customizable controller
