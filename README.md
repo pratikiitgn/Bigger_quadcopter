@@ -30,7 +30,7 @@
         Pixfalcon: ```make px4_fmu-v2_default```\
         Dropix: ```make px4_fmu-v2_default```\
         Pixhawk 1: ```make px4_fmu-v2_default```
-3) To flash on hardware - ```make px4_fmu-v4_default upload```
+3) To flash on hardware - ```make px4_fmu-v3_default upload```
 
 ## For Ardupilot Customizable controller
 
