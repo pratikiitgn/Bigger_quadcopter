@@ -39,7 +39,7 @@
 3) To flash on hardware - ```make px4_fmu-v3_default upload```
 4) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
 
-### Making first application
+### Making first application - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html
 
 1) First Goto Px4_developer-> Firmware -> build -> px4_fmu-v3_default -> src -> examples
 2) Make a directory named [px4_simple_app]. Make a .c file named [px4_simple_app.c] and paste the following basic code
@@ -73,7 +73,7 @@ px4_add_module(
 ```examples/px4_simple_app```
 
 
-### For MAVLink Shell/console
+### For MAVLink Shell/console - https://dev.px4.io/v1.11_noredirect/en/debug/mavlink_shell.html
 
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
 2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
