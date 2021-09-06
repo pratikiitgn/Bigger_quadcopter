@@ -7,6 +7,7 @@
 
     a) First install git
     b) clone the git repo - ```git clone https://github.com/PX4/Firmware.git --recursive```
+    c) Go to firmware directory type - ```bash ./Tools/setup/ubuntu.sh```
 
 ## For Ardupilot Customizable controller
 
