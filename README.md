@@ -7,7 +7,9 @@
 
     a) First install git - ```sudo apt-get install git```\
     b) clone the git repo - ```git clone https://github.com/PX4/Firmware.git --recursive```\
-    c) Go to firmware directory type - ```bash ./Tools/setup/ubuntu.sh```
+    c) Go to firmware directory type - ```bash ./Tools/setup/ubuntu.sh```\
+    d) Now reboot the PC - sudo reboot now\
+    e) install SITL - go to firmware directory again and run - ```make px4_sitl jmavsim```\
 
 ## For Ardupilot Customizable controller
 
