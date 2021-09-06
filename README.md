@@ -18,6 +18,9 @@
 2) Go to ardupilot directory and type following code to build the fmv3 version. After successfully building it you will see fmv3 named folder in build directory. After that run following code to burn on Pixhawk\
     ```./waf configure --board fmuv3```\
     ```./waf copter```
+2.1) Go to ardupilot directory and type following code to build the fmv2 version. After successfully building it you will see pixhawk1 named folder in build directory. After that run following code to burn on Pixhawk\
+    ```./waf configure --board pxhawk1```\
+    ```./waf copter```
 3) To upload the code on the Pixhawk use following code in ardupilot main directory\
     ``` ./waf --targets bin/arducopter --upload```
 
