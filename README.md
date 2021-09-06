@@ -2,7 +2,7 @@
 
 ## For PX4 based Customizable controller
 
-### Usefull linkes
+### Usefull links
 
 1) Main webpage - https://docs.px4.io/master/en/dev_setup/getting_started.html
 
