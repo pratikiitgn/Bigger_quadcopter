@@ -10,6 +10,26 @@
     c) Go to firmware directory type - ```bash ./Tools/setup/ubuntu.sh```\
     d) Now reboot the PC - sudo reboot now\
     e) install SITL - go to firmware directory again and run - ```make px4_sitl jmavsim```\
+    f) Try to take the drone using - ```commander takeoff```\
+    g) To land use - ```commander land```
+
+## Building for NuttX/Pixhawk Based Boards
+
+    a) Build NuttX by running this command for Pixhawk 2.4.8 - ```make px4_fmu-v3_default```\
+    b) For other board use following commands\
+        Pixhawk 4: make px4_fmu-v5_default\
+        Pixhawk 4 Mini: make px4_fmu-v5_default\
+        CUAV V5+: make px4_fmu-v5_default\
+        CUAV V5 nano: make px4_fmu-v5_default\
+        Pixracer: make px4_fmu-v4_default\
+        Pixhawk 3 Pro: make px4_fmu-v4pro_default\
+        Pixhawk Mini: make px4_fmu-v3_default\
+        Pixhawk 2 (Cube Black): make px4_fmu-v3_default\
+        mRo Pixhawk: make px4_fmu-v3_default (supports 2MB Flash)\
+        Holybro pix32: make px4_fmu-v2_default\
+        Pixfalcon: make px4_fmu-v2_default\
+        Dropix: make px4_fmu-v2_default\
+        Pixhawk 1: make px4_fmu-v2_default\
 
 ## For Ardupilot Customizable controller
 
