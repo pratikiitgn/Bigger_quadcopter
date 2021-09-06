@@ -3,6 +3,8 @@
 ## For PX4 based Customizable controller
 
 1) Main webpage - https://docs.px4.io/master/en/dev_setup/getting_started.html
+2) Installation for Ubuntu machine - https://docs.px4.io/master/en/dev_setup/dev_env_linux_ubuntu.html, Youtube link - https://www.youtube.com/watch?v=OtValQdAdrU&t=7s
+
 
 ## For Ardupilot Customizable controller
 
