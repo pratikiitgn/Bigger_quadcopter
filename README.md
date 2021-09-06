@@ -73,6 +73,11 @@ px4_add_module(
 ```examples/px4_simple_app```
 
 
+### For MAVLink Shell/console
+
+1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
+2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
+
 ## For Ardupilot Customizable controller
 
 ### Usefull links
