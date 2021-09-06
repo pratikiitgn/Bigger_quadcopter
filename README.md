@@ -37,6 +37,8 @@
 * Pixhawk 1: ```make px4_fmu-v2_default```
 
 3) To flash on hardware - ```make px4_fmu-v3_default upload```
+4) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
+
 
 ## For Ardupilot Customizable controller
 
