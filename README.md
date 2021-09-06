@@ -22,19 +22,20 @@
 
 1) Build NuttX by running this command for Pixhawk 2.4.8 - ```make px4_fmu-v3_default```\
 2) For other board use following commands\
-        * Pixhawk 4: ```make px4_fmu-v5_default```\
-        * Pixhawk 4 Mini: ```make px4_fmu-v5_default```\
-        * CUAV V5+: ```make px4_fmu-v5_default```\
-        * CUAV V5 nano: ```make px4_fmu-v5_default```\
-        * Pixracer: ```make px4_fmu-v4_default```\
-        * Pixhawk 3 Pro: ```make px4_fmu-v4pro_default```\
-        * Pixhawk Mini: ```make px4_fmu-v3_default```\
-        * Pixhawk 2 (Cube Black): ```make px4_fmu-v3_default```\
-        * mRo Pixhawk: ```make px4_fmu-v3_default (supports 2MB Flash)```\
-        * Holybro pix32: ```make px4_fmu-v2_default```\
-        * Pixfalcon: ```make px4_fmu-v2_default```\
-        * Dropix: ```make px4_fmu-v2_default```\
-        * Pixhawk 1: ```make px4_fmu-v2_default```
+* Pixhawk 4: ```make px4_fmu-v5_default```\
+* Pixhawk 4 Mini: ```make px4_fmu-v5_default```\
+* CUAV V5+: ```make px4_fmu-v5_default```\
+* CUAV V5 nano: ```make px4_fmu-v5_default```\
+* Pixracer: ```make px4_fmu-v4_default```\
+* Pixhawk 3 Pro: ```make px4_fmu-v4pro_default```\
+* Pixhawk Mini: ```make px4_fmu-v3_default```\
+* Pixhawk 2 (Cube Black): ```make px4_fmu-v3_default```\
+* mRo Pixhawk: ```make px4_fmu-v3_default (supports 2MB Flash)```\
+* Holybro pix32: ```make px4_fmu-v2_default```\
+* Pixfalcon: ```make px4_fmu-v2_default```\
+* Dropix: ```make px4_fmu-v2_default```\
+* Pixhawk 1: ```make px4_fmu-v2_default```
+
 3) To flash on hardware - ```make px4_fmu-v3_default upload```
 
 ## For Ardupilot Customizable controller
