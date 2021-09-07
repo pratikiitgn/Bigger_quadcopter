@@ -73,6 +73,8 @@ px4_add_module(
 ```examples/px4_simple_app```
 
 
+5) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
+
 ### For MAVLink Shell/console - https://dev.px4.io/v1.11_noredirect/en/debug/mavlink_shell.html
 
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
