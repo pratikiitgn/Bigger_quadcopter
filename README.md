@@ -81,7 +81,7 @@ px4_add_module(
 Individual message channels between applications are called topics. Take an example of sensor_combined topic. \
 1) Include sensor_combined header file in your app- ```#include <uORB/topics/sensor_combined.h>```
 2) Add ```int sensor_sub_fd = orb_subscribe(ORB_ID(sensor_combined));``` in the main function.\
-    ```sensor_sub_fd``` is a topic handle and can be used to very efficiently perform a blocking wait for new data. The current thread goes to sleep and is woken up automatically by the scheduler once new data is available, not consuming any CPU cycles while waiting. To do this, we use the ```poll()``` POSIX system call. Adding ```poll()``` to the subscription looks like (pseudocode, look for the full implementation below):
+    ```sensor_sub_fd``` is a topic handle and can be used to very efficiently perform a blocking wait for new data. The current thread goes to sleep and is woken up automatically by the scheduler once new data is available, not consuming any CPU cycles while waiting. To do this, we use the ```poll()``` POSIX system call. Adding ```poll()``` to the subscription looks like (pseudocode, look for the full implementation below). The final code would be as follows...
 
 ```#include <poll.h>
 #include <uORB/topics/sensor_combined.h>
@@ -107,8 +107,8 @@ while (true) {
                     (double)raw.accelerometer_m_s2[1],
                     (double)raw.accelerometer_m_s2[2]);
     }
-}```
-
+}
+```
 
 ### Reading quadcopter attitude data
 
