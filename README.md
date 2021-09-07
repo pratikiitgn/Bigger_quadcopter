@@ -97,7 +97,10 @@ Individual message channels between applications are called topics. Take an exam
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
 2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
 
+### What is file descriptor?
 
+1) It is an index the file descriptor table.
+2) For each process in an operating system, there is a process control box (PCB). PCB keeps track of the context of the process. One of the field within this is called as file descriptor table (FDT). FDT holds pointers to 'resources'. The resources means a) Files, b) terminal i/o, c) pipes, d) sockets, e) devices etc. 
 
 
 
