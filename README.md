@@ -5,7 +5,8 @@
 ### Usefull links
 
 1) Main webpage - https://docs.px4.io/master/en/dev_setup/getting_started.html
-
+2) Available messages on PX4 Autopilot - https://github.com/PX4/PX4-Autopilot/tree/master/msg
+3) 
 ### Installation for Ubuntu Environment
 
 1) Installation for Ubuntu machine - https://docs.px4.io/master/en/dev_setup/dev_env_linux_ubuntu.html, Youtube link - https://www.youtube.com/watch?v=OtValQdAdrU&t=7s
@@ -75,10 +76,76 @@ px4_add_module(
 
 5) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
 
+### Subscribing to sensor data
+
+Individual message channels between applications are called topics. Take an example of sensor_combined topic. \
+1) Include sensor_combined header file in your app- ```#include <uORB/topics/sensor_combined.h>```
+2) Add ```int sensor_sub_fd = orb_subscribe(ORB_ID(sensor_combined));``` in the main function.\
+    ```sensor_sub_fd``` is a topic handle and can be used to very efficiently perform a blocking wait for new data. The current thread goes to sleep and is woken up automatically by the scheduler once new data is available, not consuming any CPU cycles while waiting. To do this, we use the ```poll()``` POSIX system call. Adding ```poll()``` to the subscription looks like (pseudocode, look for the full implementation below):
+
+```#include <poll.h>
+#include <uORB/topics/sensor_combined.h>
+..
+int sensor_sub_fd = orb_subscribe(ORB_ID(sensor_combined));
+
+/* one could wait for multiple topics with this technique, just using one here */
+px4_pollfd_struct_t fds[] = {
+    { .fd = sensor_sub_fd,   .events = POLLIN },
+};
+
+while (true) {
+    /* wait for sensor update of 1 file descriptor for 1000 ms (1 second) */
+    int poll_ret = px4_poll(fds, 1, 1000);
+    ..
+    if (fds[0].revents & POLLIN) {
+        /* obtained data for the first file descriptor */
+        struct sensor_combined_s raw;
+        /* copy sensors raw data into local buffer */
+        orb_copy(ORB_ID(sensor_combined), sensor_sub_fd, &raw);
+        PX4_INFO("Accelerometer:\t%8.4f\t%8.4f\t%8.4f",
+                    (double)raw.accelerometer_m_s2[0],
+                    (double)raw.accelerometer_m_s2[1],
+                    (double)raw.accelerometer_m_s2[2]);
+    }
+}```
+
+
+### Reading quadcopter attitude data
+
+1) vehicle_attitude.msg is the name of file provides the attitude of the quadcopter - https://github.com/PX4/PX4-Autopilot/blob/master/msg/vehicle_attitude.msg
+
+2) First Goto Px4_developer-> Firmware -> src -> examples
+
+
+
 ### For MAVLink Shell/console - https://dev.px4.io/v1.11_noredirect/en/debug/mavlink_shell.html
 
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
 2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## For Ardupilot Customizable controller
 
