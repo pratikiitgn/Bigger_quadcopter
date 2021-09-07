@@ -76,19 +76,15 @@ px4_add_module(
 
 5) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
 
-### Subscribing to sensor data
+### Subscribing to sensor data - list of topics - https://github.com/PX4/PX4-Autopilot/tree/master/msg
 
 Individual message channels between applications are called topics. Take an example of sensor_combined topic. \
 1) Include sensor_combined header file in your app- ```#include <uORB/topics/sensor_combined.h>```
 2) Add ```int sensor_sub_fd = orb_subscribe(ORB_ID(sensor_combined));``` in the main function.\
     ```sensor_sub_fd``` is a topic handle and can be used to very efficiently perform a blocking wait for new data. The current thread goes to sleep and is woken up automatically by the scheduler once new data is available, not consuming any CPU cycles while waiting. To do this, we use the ```poll()``` POSIX system call. Adding ```poll()``` to the subscription looks like (pseudocode, look for the full implementation below). The final code is here - [reading_accelerometer_data.c] 
 
+3) Combined code for vehicle attitude with the accelerometer data - [reading_accelerometer_attitude_data.c]
 
-### Reading quadcopter attitude data
-
-1) vehicle_attitude.msg is the name of file provides the attitude of the quadcopter - https://github.com/PX4/PX4-Autopilot/blob/master/msg/vehicle_attitude.msg
-
-2) First Goto Px4_developer-> Firmware -> src -> examples
 
 
 
@@ -227,3 +223,4 @@ Icon = (provide oath of your application's icon)
 
 
 [reading_accelerometer_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c
+[reading_accelerometer_attitude_data.c]: 
