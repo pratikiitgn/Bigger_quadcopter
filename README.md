@@ -140,7 +140,7 @@ Individual message channels between applications are called topics. Take an exam
 
 ### To plot the customize sensor data to QGroundControl
 
-1) This is only valid for QGroundControl v 3..6 only. We need to use mavlink protocol.
+1) This is only valid for QGroundControl v 3.5.6 only. We need to use mavlink protocol.
 2) The file that is helpful is located at Firmware-> src -> examples -> px4_mavlink_debug -> px4_mavlink_debug.cpp
 3) To unable it, we need to uncomment name of this app from Firmware -> boards -> px4 -> fmu-v3 -> default.cmake in example section
 4) Now, open the QGroundControl v 3.5.6. Go to mavlink console and run ```px4_mavlink_debug``` code.
