@@ -7,7 +7,7 @@
 1) Main webpage - https://docs.px4.io/master/en/dev_setup/getting_started.html
 2) Available messages on PX4 Autopilot - https://github.com/PX4/PX4-Autopilot/tree/master/msg
 3) Online data analyser - https://logs.px4.io/
-
+4) Compatible version of QGroundController (v 3.5.6) for real-time ploting of sensor data - https://github.com/mavlink/qgroundcontrol/releases/tag/v3.5.6
 
 
 ### Installation for Ubuntu Environment
