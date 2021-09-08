@@ -90,8 +90,14 @@ Individual message channels between applications are called topics. Take an exam
 
 ### For MAVLink Shell/console - https://dev.px4.io/v1.11_noredirect/en/debug/mavlink_shell.html
 
+* Option - 1 (Using mavlink shell)
+
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
 2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
+
+* Option - 2 (Using mavlink console in QGroundControl)
+
+1) Just open QGroundControl and run codes. It is same as Option - 1
 
 ### What is file descriptor? (Not finished)
 
@@ -122,6 +128,9 @@ Individual message channels between applications are called topics. Take an exam
     vehicle_air_speed
     inpur_rc
     ```
+    d) Remove the SD card from PC and insert it into Pixhawk.\
+    e) Just go to mavlink console use the code ```logger start``` and ```logger stop```\
+    f) Now, you can download the logged file from 'Log Download' tab on QGroundControl\
 
 
 
