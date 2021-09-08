@@ -93,16 +93,35 @@ Individual message channels between applications are called topics. Take an exam
 1) First shutdown the QGroundControl and install dependancies by - ```sudo pip3 install pymavlink pyserial```
 2) Open the terminal in Firmware directory and run this code - ```./Tools/mavlink_shell.py /dev/ttyACM0```
 
-### What is file descriptor?
+### What is file descriptor? (Not finished)
 
 1) It is an index the file descriptor table.
 2) For each process in an operating system, there is a process control box (PCB). PCB keeps track of the context of the process. One of the field within this is called as file descriptor table (FDT). FDT holds pointers to 'resources'. The resources means a) Files, b) terminal i/o, c) pipes, d) sockets, e) devices etc. 
 
-### PX4 SITL RTPS Gazebo
+### PX4 SITL RTPS Gazebo (Not finished)
 
 1) Run these code from PX4-Autopilot directory - ```make px4_sitl_rtps gazebo```
 
+### Logging data to SD card
 
+1) Logger is able to log any uORB topic. The output format of log file is ULog -> https://docs.px4.io/master/en/dev_log/ulog_file_format.html
+2) By default logging is started when we arm quadcopter and stop when we disarm thr quadcopter. 
+3) To arm and disarm the quadcopter use the code - ```logger on``` and ```logger off```
+4) To get a list of all supoorted logger commands and parameters use - ```logger help```
+5) To create a custom message\
+    a) Remove the SD card from PIXHAWK and open it on PC with SD card reader.\
+    b) Create a ```etc``` folder, inside it create ```logging``` folder, inside it create text file named ```logger_topics.txt```. Finally, you will have ```etc/logging/logger_topics.txt```.\
+    c) Just mention the name of msg in this txt file as follows
+    ```
+    adc_report
+    airspeed
+    ekf_gps_position
+    sensor_combined
+    sensor_baro
+    vehicle_attitude
+    vehicle_air_speed
+    inpur_rc
+    ```
 
 
 
