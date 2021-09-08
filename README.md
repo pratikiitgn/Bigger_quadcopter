@@ -6,7 +6,10 @@
 
 1) Main webpage - https://docs.px4.io/master/en/dev_setup/getting_started.html
 2) Available messages on PX4 Autopilot - https://github.com/PX4/PX4-Autopilot/tree/master/msg
-3) 
+3) Online data analyser - https://logs.px4.io/
+
+
+
 ### Installation for Ubuntu Environment
 
 1) Installation for Ubuntu machine - https://docs.px4.io/master/en/dev_setup/dev_env_linux_ubuntu.html, Youtube link - https://www.youtube.com/watch?v=OtValQdAdrU&t=7s
@@ -131,6 +134,8 @@ Individual message channels between applications are called topics. Take an exam
     d) Remove the SD card from PC and insert it into Pixhawk.\
     e) Just go to mavlink console use the code ```logger start``` and ```logger stop```\
     f) Now, you can download the logged file from 'Log Download' tab on QGroundControl\
+    g) The downloaded file will have extension of .ulog which is in binary format. We need to download pyulog package to read it. Install it using - ```pip3 install pyulog```\
+    h) Use the command ```ulog2csv``` to convert the ulog file into .csv format - ```ulog2csv (filename.ulog)```
 
 
 
