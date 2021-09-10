@@ -8,7 +8,7 @@
 2) Available messages on PX4 Autopilot - https://github.com/PX4/PX4-Autopilot/tree/master/msg
 3) Online data analyser - https://logs.px4.io/
 4) Compatible version of QGroundController (v 3.5.6) for real-time ploting of sensor data - https://github.com/mavlink/qgroundcontrol/releases/tag/v3.5.6
-
+5) Serial port configuration - https://docs.px4.io/master/en/peripherals/serial_configuration.html
 
 ### Installation for Ubuntu Environment
 
@@ -146,7 +146,9 @@ Individual message channels between applications are called topics. Take an exam
 4) Now, open the QGroundControl v 3.5.6. Go to mavlink console and run ```px4_mavlink_debug``` code.
 5) Now, you can go to widgets -> Analyze. You can see now the avaialable sensor name.
 
+## For CAM device
 
+1) Serial port configuration - https://docs.px4.io/master/en/peripherals/serial_configuration.html
 
 
 
