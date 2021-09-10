@@ -272,6 +272,4 @@ Icon = (provide oath of your application's icon)
 2) To list down all the directories - ```ls -al```
 3) To open a file - ```gedit (name of file)```
 
-
-[reading_accelerometer_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c
-[reading_accelerometer_attitude_data.c]: 
+[reading_accelerometer_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c [reading_accelerometer_attitude_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_attitude_data.c
