@@ -86,7 +86,7 @@ Individual message channels between applications are called topics. Take an exam
 2) Add ```int sensor_sub_fd = orb_subscribe(ORB_ID(sensor_combined));``` in the main function.\
     ```sensor_sub_fd``` is a topic handle and can be used to very efficiently perform a blocking wait for new data. The current thread goes to sleep and is woken up automatically by the scheduler once new data is available, not consuming any CPU cycles while waiting. To do this, we use the ```poll()``` POSIX system call. Adding ```poll()``` to the subscription looks like (pseudocode, look for the full implementation below). The final code is here - [reading_accelerometer_data.c] 
 
-3) Combined code for vehicle attitude with the accelerometer data - [reading_accelerometer_attitude_data.c]
+3) Combined code for vehicle attitude with the accelerometer data - [reading_accelerometer_attitude_data]
 
 
 
@@ -272,4 +272,4 @@ Icon = (provide oath of your application's icon)
 2) To list down all the directories - ```ls -al```
 3) To open a file - ```gedit (name of file)```
 
-[reading_accelerometer_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c [reading_accelerometer_attitude_data.c]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_attitude_data.c
+[reading_accelerometer_data]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c [reading_accelerometer_attitude_data]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_attitude_data.c
