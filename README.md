@@ -149,10 +149,18 @@ Individual message channels between applications are called topics. Take an exam
 ## For CAM device
 
 1) Serial port configuration - https://docs.px4.io/master/en/peripherals/serial_configuration.html
+2) Change the parameters [MAV_2_CONFIG] to TELEM 2, [MAV_2_RATE] to 38400 (considering 4 bits of data), 
+3) Bit rate (B/s) = baud rate * the number of bit per baud - i.e., if buad rate = 9600,\\
 
+    a) Bit rate – the number of binary ‘bits’, 1s or 0s to be transmitted per second\
+    b) Baud rate – the number of line ‘symbols’ transmitted per second
 
-
-
+4) Serial port mapping - (the location on the firmware is - PX4-Autopilot/boards/px4/fmu-v3/default.cmake)\
+    SERIAL_PORTS\
+	* GPS1:/dev/ttyS0\
+	* TEL1:/dev/ttyS1\
+	* TEL2:/dev/ttyS2\
+	* TEL4:/dev/ttyS3\
 
 
 
