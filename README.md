@@ -160,7 +160,7 @@ Individual message channels between applications are called topics. Take an exam
 	* GPS1:/dev/ttyS0\
 	* TEL1:/dev/ttyS1\
 	* TEL2:/dev/ttyS2\
-	* TEL4:/dev/ttyS3\
+	* TEL4:/dev/ttyS6\
 
 5) Sample code - https://programmer.help/blogs/5e35463a2dbdb.html
 
