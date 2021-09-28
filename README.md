@@ -216,6 +216,8 @@ Individual message channels between applications are called topics. Take an exam
 * txspace - check how much outgoing buffer space is available
 * get_flow_control - check if the UART has flow control capabilities
 
+### For mission planner message - ```https://ardupilot.org/dev/docs/debug-with-send-text.html```
+
 ### Useful notes
 
 
