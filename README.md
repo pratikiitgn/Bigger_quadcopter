@@ -283,8 +283,9 @@ Icon = (provide oath of your application's icon)
 2) To make a catkin_ws\
 	a) First create a directory named 'catkin_ws_"name_of_workspace"' - ```mkdir catkin_ws_'add_name'/src```\
 	b) ```cd catkin_ws_'add_name'```\
-	c) ```catkin_make```\
-	d) ```source devel/setup.bash```
+	c) ```catkin init```\
+	d) ```catkin_make```\
+	e) ```source devel/setup.bash```
 
 
 4) 
