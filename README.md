@@ -281,11 +281,7 @@ Icon = (provide oath of your application's icon)
 
 1) To know the ros version - ```rosversion -d```
 2) To make a catkin_ws\
-	a) First create a directory named 'catkin_ws_"name_of_workspace"' - ```mkdir catkin_ws_'add_name'/src```\
-	b) ```cd catkin_ws_'add_name'```\
-	c) ```catkin init```\
-	d) ```catkin_make```\
-	e) ```source devel/setup.bash```
-
-
+	a) ```mkdir -p ~/catkin_ws/src```\
+	b) ```cd ~/catkin_ws/```\
+	c) ```catkin_make```\
 4) 
