@@ -276,3 +276,15 @@ Icon = (provide oath of your application's icon)
 
 [reading_accelerometer_data]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_data.c 
 [reading_accelerometer_attitude_data]: https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/PX4_autopilot/reading_sensor_data/reading_accelerometer_attitude_data.c
+
+## Useful notes for ROS
+
+1) To know the ros version - ```rosversion -d```
+2) To make a catkin_ws\
+	a) First create a directory named 'catkin_ws_"name_of_workspace"' - ```mkdir catkin_ws_'add_name'/src```\
+	b) ```cd catkin_ws_'add_name'```\
+	c) ```catkin_make```\
+	d) ```source devel/setup.bash```
+
+
+4) 
