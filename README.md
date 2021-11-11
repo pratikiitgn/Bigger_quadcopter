@@ -284,4 +284,54 @@ Icon = (provide oath of your application's icon)
 	a) ```mkdir -p ~/catkin_ws/src```\
 	b) ```cd ~/catkin_ws/```\
 	c) ```catkin_make```\
-4) 
+
+
+
+
+## With RPi3 (MAVROS)
+
+### Guidlines
+
+Helpful links
+https://ubuntu.com/download/raspberry-pi
+http://wiki.ros.org/melodic/Installation/Ubuntu
+
+1. Download image and burn to SD card with Etcher
+
+2. The first challenge on boot of Pi is setting up the wireless network. This will require a keyboard and ethernet connection to Pi. I've documented a bit in this gist:
+https://gist.github.com/dbaldwin/fa1baac11b0ae2f000092b695c3d0b33
+
+3. After getting the network setup you'll want to SSH into the Pi. At least that's what I did.
+
+4. Now logged into Pi I used the following commands to get ROS Melodic installed:
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+sudo apt update
+
+sudo apt install ros-melodic-ros-base
+
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+
+source ~/.bashrc
+
+5. Install MAVROS
+
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras
+
+6. Install Geographic datasets
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+chmod a+x install_geographiclib_datasets.sh
+sudo ./install_geographiclib_datasets.sh
+
+7. Connect to Pixhawk
+Plug pixhawk serial port into RPi 4 USB
+
+8. Launch MAVROS and see Pixhawk telemetry!
+roslaunch mavros px4.launch
+
+9. There may be a permissions issue with the serial port. Make sure the user launching mavros is in the "dialout" group.
+sudo usermod -a -G dialout db
+
