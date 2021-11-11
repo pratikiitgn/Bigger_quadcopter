@@ -291,6 +291,7 @@ Icon = (provide oath of your application's icon)
 ## With RPi3 (MAVROS)
 
 ### Guidlines
+reference video - https://www.youtube.com/watch?v=Irko6xb2qjs\\
 
 Helpful links
 https://ubuntu.com/download/raspberry-pi \\
