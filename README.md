@@ -293,8 +293,9 @@ Icon = (provide oath of your application's icon)
 ### Guidlines
 
 Helpful links
-https://ubuntu.com/download/raspberry-pi
-http://wiki.ros.org/melodic/Installation/Ubuntu
+https://ubuntu.com/download/raspberry-pi \\
+
+Make sure that your SD card is formatted.
 
 1. Download image and burn to SD card with Etcher
 
