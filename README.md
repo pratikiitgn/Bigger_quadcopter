@@ -224,6 +224,9 @@ Individual message channels between applications are called topics. Take an exam
 1) The "_with_bl.hex": (it will be at build->name_of_board-> bin) file contains the bootloader and is used for flashing to Ardupilot from other firmware... 
 2) The "..apj": (it will be at build->name_of_board-> bin) is used by mission planner to update firmware on existing Ardupilot installations as a local firmware file
 
+### If functions in UserCode.cpp files are disabled/showing less brightened
+
+1) Go to APM_Config.h file and uncomment the respective functions.
 
 ## Getting started with Git
 
