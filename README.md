@@ -325,6 +325,9 @@ sudo usermod -a -G dialout db
 Username - ```pi```
 Passward - ```raspberry```
 
-To turn off - ```sudo shutdown -h now```
+To turn off - ```sudo shutdown -h now```\
+
+To configure the wifi - https://forums.raspberrypi.com/viewtopic.php?t=210245\
+
 
 
