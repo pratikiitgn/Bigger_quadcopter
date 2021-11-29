@@ -320,3 +320,11 @@ roslaunch mavros px4.launch
 9. There may be a permissions issue with the serial port. Make sure the user launching mavros is in the "dialout" group.
 sudo usermod -a -G dialout db
 
+### With Rpi
+
+Username - ```pi```
+Passward - ```raspberry```
+
+To turn off - ```sudo shutdown -h now```
+
+
