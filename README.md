@@ -320,7 +320,12 @@ roslaunch mavros px4.launch
 9. There may be a permissions issue with the serial port. Make sure the user launching mavros is in the "dialout" group.
 sudo usermod -a -G dialout db
 
-### With Rpi
+### With Rpi 3 Model A+
+
+GPIO PINS layout 
+
+https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/Rpi/Photos/GPIO_Pin_rpi.png.png
+
 
 Username - ```pi```
 Passward - ```raspberry```
@@ -328,6 +333,6 @@ Passward - ```raspberry```
 To turn off - ```sudo shutdown -h now```\
 
 To configure the wifi - https://forums.raspberrypi.com/viewtopic.php?t=210245\
-
+To configure RX TX pin - https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c\
 
 
