@@ -228,27 +228,7 @@ Individual message channels between applications are called topics. Take an exam
 
 1) Go to APM_Config.h file and uncomment the respective functions.
 
-## Getting started with Git
 
-1) Make a github account and install git on ubuntu machine
-2) Configure with this code on terminal - \
-    $ git config --global user.name "pratikiitgn"\
-    $ git config --global user.email "pkprajapati5959@gmail.com"
-3) To check the configuration \
-    $ git config --list
-4) Make a directory for git in home \
-    $ mkdire git_workspace
-5) Open git_workspace in terminal and clone the repositary\
-    $ git clone (url of your repository)
-6) Now, make a file in your repository in ubuntu
-    $ touch test.txt
-7) To check the status of GitHub repository
-    $ git status
-8) To add file over the github account
-    $ git add (name_of_filename)\
-    $ git commit -m "add here your comments" (name_of_your_file)\
-    $ git push -u origin master\
-    Then after apply your username and password
     
     
 ## Some Ubuntu Shortcuts
