@@ -17,7 +17,7 @@
     a) First install git - ```sudo apt-get install git```\
     b) clone the git repo - ```git clone https://github.com/PX4/PX4-Autopilot.git --recursive```\
     c) Go to firmware directory type - ```bash ./PX4-Autopilot/Tools/setup/ubuntu.sh```\
-    d) Now reboot the PC - sudo reboot now\
+    d) Now reboot the PC - ```sudo reboot now```\
     e) install SITL - go to firmware directory again and run - ```make px4_sitl jmavsim```\
     f) Try to take the drone using - ```commander takeoff```\
     g) To land use - ```commander land```
