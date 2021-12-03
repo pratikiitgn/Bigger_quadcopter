@@ -45,7 +45,7 @@
 
 ### Making first application - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html
 
-1) First Goto Px4_developer-> Firmware -> src -> examples
+1) First Goto Px4-Autopilot -> src -> examples
 2) Make a directory named [px4_simple_app]. Make a .c file named [px4_simple_app.c] and paste the following basic code
 
 ``` 
