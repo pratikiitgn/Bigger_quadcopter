@@ -15,7 +15,7 @@
 1) Installation for Ubuntu machine - https://docs.px4.io/master/en/dev_setup/dev_env_linux_ubuntu.html, Youtube link - https://www.youtube.com/watch?v=OtValQdAdrU&t=7s
 
     a) First install git - ```sudo apt-get install git```\
-    b) clone the git repo - ```git clone https://github.com/PX4/Firmware.git --recursive```\
+    b) clone the git repo - ```git clone https://github.com/PX4/PX4-Autopilot.git --recursive```\
     c) Go to firmware directory type - ```bash ./Tools/setup/ubuntu.sh```\
     d) Now reboot the PC - sudo reboot now\
     e) install SITL - go to firmware directory again and run - ```make px4_sitl jmavsim```\
