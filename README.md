@@ -194,6 +194,26 @@ Individual message channels between applications are called topics. Take an exam
 3) To upload the code on the Pixhawk use following code in ardupilot main directory\
     ``` ./waf --targets bin/arducopter --upload```
 
+4) If you got the error  ```Waf: Entering directory `/home/user/ardupilot/build/navio2'
+Command ['/usr/bin/git', 'rev-parse', '--short=8', 'HEAD'] returned 128 ``` when you are working on git based ardupilot directory.
+
+Go to Tools/ardupilotwaf/git_submodule.py and modified following method
+
+```def _git_head_hash(ctx, path, short=False):
+    cmd = [ctx.env.get_flat('GIT'), 'rev-parse']
+    if short:
+        cmd.append('--short=8')
+    cmd.append('HEAD')
+    out = ctx.cmd_and_log(cmd, quiet=Context.BOTH, cwd=path)
+    return out.strip()```
+    
+to 
+
+```def _git_head_hash(ctx, path, short=False):
+    return "deadc0de"```
+    
+    
+
 ### UART Ports on Ardupilot https://ardupilot.org/dev/docs/learning-ardupilot-uarts-and-the-console.html
 
 1) Followings are the UART ports on the Pixhawk
