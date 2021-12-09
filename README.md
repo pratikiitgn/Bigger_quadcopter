@@ -199,18 +199,22 @@ Command ['/usr/bin/git', 'rev-parse', '--short=8', 'HEAD'] returned 128 ``` when
 
 Go to Tools/ardupilotwaf/git_submodule.py and modified following method
 
-```def _git_head_hash(ctx, path, short=False):
+```
+def _git_head_hash(ctx, path, short=False):
     cmd = [ctx.env.get_flat('GIT'), 'rev-parse']
     if short:
         cmd.append('--short=8')
     cmd.append('HEAD')
     out = ctx.cmd_and_log(cmd, quiet=Context.BOTH, cwd=path)
-    return out.strip()```
+    return out.strip()
+```
     
 to 
 
-```def _git_head_hash(ctx, path, short=False):
-    return "deadc0de"```
+```
+def _git_head_hash(ctx, path, short=False):
+    return "deadc0de"
+```
     
     
 
