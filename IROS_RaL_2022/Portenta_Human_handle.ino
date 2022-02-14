@@ -11,7 +11,7 @@ void setup()
   Serial1.begin(2000000);
 
 //// To stop the code until serial moniter open
-  while(!Serial){;}
+//  while(!Serial){;}
 
 ////============ for IMU communication  
 Wire.begin();
@@ -78,25 +78,25 @@ void loop()
       Serial1.print(AccZ*100 + 500000,0);
       Serial1.println("_");
 
-//      Serial.print("/");
-//      Serial.print(roll*180.0/PI*100 + 500000,0);
-//      Serial.print(",");
-//      Serial.print(pitch*180.0/PI*100 + 500000,0);
-//      Serial.print(",");
-//      Serial.print(yaw*180.0/PI*100 + 500000,0);
-//      Serial.print(",");
-//      Serial.print(AccX*100 + 500000,0);
-//      Serial.print(",");
-//      Serial.print(AccY*100 + 500000,0);
-//      Serial.print(",");
-//      Serial.print(AccZ*100 + 500000,0);
-//      Serial.println("_");
+      Serial.print("/");
+      Serial.print(roll*180.0/PI*100 + 500000,0);
+      Serial.print(",");
+      Serial.print(pitch*180.0/PI*100 + 500000,0);
+      Serial.print(",");
+      Serial.print(yaw*180.0/PI*100 + 500000,0);
+      Serial.print(",");
+      Serial.print(AccX*100 + 500000,0);
+      Serial.print(",");
+      Serial.print(AccY*100 + 500000,0);
+      Serial.print(",");
+      Serial.print(AccZ*100 + 500000,0);
+      Serial.println("_");
 
-      Serial.print(AccX);
-      Serial.print(",");
-      Serial.print(AccY);
-      Serial.print(",");
-      Serial.println(AccZ);
+//      Serial.print(AccX);
+//      Serial.print(",");
+//      Serial.print(AccY);
+//      Serial.print(",");
+//      Serial.println(AccZ);
 
       digitalWrite(LEDR,HIGH);                                        // Blink Portenta Red Light
       digitalWrite(LEDG,LOW);                                         // Blink Portenta Green Light
