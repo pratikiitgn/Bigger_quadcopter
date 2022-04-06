@@ -192,7 +192,9 @@ Individual message channels between applications are called topics. Take an exam
     ```./waf configure --board pxhawk1```\
     ```./waf copter```
 3) To upload the code on the Pixhawk use following code in ardupilot main directory\
-    ``` ./waf --targets bin/arducopter --upload```
+    ```./waf --targets bin/arducopter --upload```
+    or \
+    ```./waf copter --upload```
 
 4) If you got the error  ```Waf: Entering directory `/home/user/ardupilot/build/navio2'
 Command ['/usr/bin/git', 'rev-parse', '--short=8', 'HEAD'] returned 128 ``` when you are working on git based ardupilot directory.
