@@ -70,7 +70,7 @@ void readSensor()
   digitalWrite(CSn2, HIGH);
 
 //Serial.println("Encoder -1 %d, Encoder -2 %d",dataOut1,dataOut2);
-//Serial.println(dataOut1);
+//Serial.println(dataOut2);
 /////////////////////////////////
 
   int offset_encoder_1 = 1730;
@@ -97,10 +97,15 @@ void readSensor()
 
   phi_p   = (float) (offsetted_encoder_1 * 0.0878906);
   theta_p = (float) (offsetted_encoder_2 * 0.0878906);
+  phi_p   = phi_p + 58.8;
+  theta_p   = theta_p + 25.31;
+  
+//  Serial.println(phi_p);
+//  Serial.println(theta_p);
 
   int phi_p_scaled    = 50000 + (phi_p*100);
   int theta_p_scaled  = 50000 + (theta_p*100);
-  
+
   String temp1 = String(phi_p_scaled);
   String temp2 = String(theta_p_scaled);
   String temp3 = "," + temp1 + "_" + temp2 + "/";
