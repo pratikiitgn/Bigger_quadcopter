@@ -79,21 +79,24 @@ void readSensor()
   int offsetted_encoder_1 = dataOut1 - offset_encoder_1;   
   int offsetted_encoder_2 = dataOut2 - offset_encoder_2;   
 
-  float E_1_phi =  497;   // Encoder position 1
-  float V_1_phi =  41.67; // Encoder position 2
-  float E_2_phi =  35;    // Vicon position 1
-  float V_2_phi =  0.67;  // vicon position 2
- 
-  float E_1_theta = 490 ; // Encoder position 1
-  float V_1_theta = 40 ;  // Encoder position 2
-  float E_2_theta = 20 ;  // Vicon position 1
-  float V_2_theta = 0.3 ; // vicon position 2
- 
-  float steadyStateError_thetap = 0.5;
-  float steadyStateError_phip   = 2.5;
- 
-  phi_p   = (float)(V_1_phi+((offsetted_encoder_1 - E_1_phi) * (V_2_phi - V_1_phi) / (E_2_phi - E_1_phi))) - steadyStateError_phip;
-  theta_p = (float)(V_1_theta+((offsetted_encoder_2 - E_1_theta) * (V_2_theta - V_1_theta) / (E_2_theta - E_1_theta))) - steadyStateError_thetap;
+//  float E_1_phi =  497;   // Encoder position 1
+//  float V_1_phi =  41.67; // Encoder position 2
+//  float E_2_phi =  35;    // Vicon position 1
+//  float V_2_phi =  0.67;  // vicon position 2
+// 
+//  float E_1_theta = 490 ; // Encoder position 1
+//  float V_1_theta = 40 ;  // Encoder position 2
+//  float E_2_theta = 20 ;  // Vicon position 1
+//  float V_2_theta = 0.3 ; // vicon position 2
+// 
+//  float steadyStateError_thetap = 0.5;
+//  float steadyStateError_phip   = 2.5;
+//
+//  phi_p   = (float)(V_1_phi+((offsetted_encoder_1 - E_1_phi) * (V_2_phi - V_1_phi) / (E_2_phi - E_1_phi))) - steadyStateError_phip;
+//  theta_p = (float)(V_1_theta+((offsetted_encoder_2 - E_1_theta) * (V_2_theta - V_1_theta) / (E_2_theta - E_1_theta))) - steadyStateError_thetap;
+
+  phi_p   = (float) (offsetted_encoder_1 * 0.0878906);
+  theta_p = (float) (offsetted_encoder_2 * 0.0878906);
 
   int phi_p_scaled    = 50000 + (phi_p*100);
   int theta_p_scaled  = 50000 + (theta_p*100);
