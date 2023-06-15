@@ -1,6 +1,7 @@
 ## BASH scripting
 
-1) 
+1) Bourne Again Shell
+2) ```echo``` - to display the text you pass
 
 ## For PX4 based Customizable controller
 
