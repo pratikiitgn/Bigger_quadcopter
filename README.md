@@ -3,7 +3,8 @@
 1) Best video - (1) https://youtu.be/_NUO4JEtkDw (2) VIM + tmux - https://youtu.be/5r6yzFEXajQ
 2) ```$vimtutor``` - to get started learning with VIM
 3) Three modes i) Normal ii) Insert iii) Visual
-4) 
+4) ```h - j - k - l``` left up down right
+5) 
 
 ## BASH scripting
 
