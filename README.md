@@ -1,6 +1,7 @@
-## VIM
+## VIM 
 
-1) 
+1) Best video - (1) https://youtu.be/_NUO4JEtkDw (2) VIM + tmux - https://youtu.be/5r6yzFEXajQ
+2) 
 
 ## BASH scripting
 
