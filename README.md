@@ -4,7 +4,16 @@
 2) ```$vimtutor``` - to get started learning with VIM
 3) Three modes i) Normal ii) Insert iii) Visual
 4) ```h - j - k - l``` left up down right
-5) 
+5) ```gg``` - go to top of file
+6) ``` diw``` - delete in word
+7) ```di)``` - yank all text inside parentheses
+8) ```dd``` delete current line
+9) ```:wq``` write current file and quit
+10) ```ZQ``` write current file, if modified and quit
+11) ```ZQ``` Quit without checking for changes 
+12) ```:w``` write current file
+13) 
+
 
 ## BASH scripting
 
