@@ -36,7 +36,9 @@
    6) ```wstool merge -t src /tmp/mavros.rosinstall```
    7) ```wstool update -t src -j4```
    8) ```rosdep install --from-paths src --ignore-src -y ``` 
-   9) ```./src/mavros/mavros/scripts/install_geographiclib_datasets.sh```
+   9) ```./src/mavros/mavros/scripts/install_geographiclib_datasets.sh``` (This line will through some error. You can skip it and build tbe workspace.) Solve this by - use https://sourceforge.net/projects/geographiclib/files/magnetic-distrib/ for geographic lib error files
+download tar --no-check-certificate, extract, copy and paste to usr/share/GeographicLib
+cp -R ./magnetic /usr/share.GeographicLib 
    10) ```catkin build```
    11) ```source devel/setup.bash```
 
