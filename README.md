@@ -1,4 +1,4 @@
-## Rpi4 8 gb RAM
+## Rpi4 8 gb RAM ([link][rpilink])
 1) Download raspberry pi imager - https://www.raspberrypi.com/software/
 2) Select -> Other general-purpose OS -> Ubuntu -> Ubuntu Server 20.04.5 LTS (64-bit)
 3) Go to settings (gear icon) <br> 
@@ -7,7 +7,7 @@
     iii) username = ```raspberrypi2```, password = ```raspberry```, <br>
     iv) Configure wireless LAN: SSID - ```pratik```, password - ```hcrlab8318``` <br>
 
-[1]: http://google.com/ "Google"[2]: http://search.yahoo.com/ "Yahoo Search"[3]: http://search.msn.com/ "MSN Search"
+[rpilink]: https://robu.in/product/raspberry-pi-4-model-b-8gb-starter-kit/?gclid=CjwKCAjwkLCkBhA9EiwAka9QRkXvehp1eUdSgwkAgVF37yJyJTX_pxnJmlBz8wtE63cy9Ec5fIf58RoCWRkQAvD_BwE
 
 ## TP link wifi router information
 
