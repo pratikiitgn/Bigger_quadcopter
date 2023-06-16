@@ -7,6 +7,8 @@
     iii) username = ```raspberrypi2```, password = ```raspberry```, <br>
     iv) Configure wireless LAN: SSID - ```pratik```, password - ```hcrlab8318``` <br>
 
+[1]: http://google.com/ "Google"[2]: http://search.yahoo.com/ "Yahoo Search"[3]: http://search.msn.com/ "MSN Search"
+
 ## TP link wifi router information
 
 username - ```hcrlab``` <br>
