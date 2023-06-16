@@ -20,7 +20,7 @@
 	    
 5) Install ROS Noetic [link][noeticlink] <br>
    1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
-   2) To source the environment ```source /opt/ros/noetic/setup.bash```
+   2) To source the environment type this ```source /opt/ros/noetic/setup.bash``` in your bashrc file by ```echo "source /opt/ros/noetic/setup.bash" >> ~/. bashrc``` and then source by ```source ~/.bashrc```
  
   [noeticlink]: http://wiki.ros.org/noetic/Installation/Ubuntu
    
