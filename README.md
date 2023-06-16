@@ -14,8 +14,10 @@
    type the command - ```sudo nano 50-cloud-init.yaml``` <br>
    1) First remove ```render - network```
    2) below "access-points": <br>
-        "hcrlab":
-	    password: "hcrlab8318"
+        "hcrlab": <br>
+	    password: "hcrlab8318" <br>
+	    (consider four spaces for tab in yaml file)
+	    
    
    
 
