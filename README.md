@@ -24,6 +24,9 @@
  
   [noeticlink]: http://wiki.ros.org/noetic/Installation/Ubuntu
    
+6) Install MAVROS from source - ([link][mavrosfromsource]) <br>
+
+[mavrosfromsource]:https://docs.px4.io/main/en/ros/mavros_installation.html#source-installation
 
 
 ## TP link wifi router information
