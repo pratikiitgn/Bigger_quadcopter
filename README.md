@@ -15,7 +15,7 @@
    1) First remove ```render - network```
    2) below "access-points": <br>
         "hcrlab": <br>
-	    password: "hcrlab8318" <br>
+	 <tab>   password: "hcrlab8318" <br>
 	    (consider four spaces for tab in yaml file)
 	    
    
