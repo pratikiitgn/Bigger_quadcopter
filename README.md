@@ -18,7 +18,9 @@
 	(four spaces) password: "hcrlab8318" <br>
 	    (consider four spaces for tab in yaml file)
 	    
-   
+5) Install ROS Noetic [link][noetic_link]
+  
+  [noetic_link]:http://wiki.ros.org/noetic/Installation/Ubuntu
    
 
 
