@@ -1,3 +1,16 @@
+## TP link wifi router information
+
+username - hcrlab\,
+password - hcrlab8318\,
+ip address - 192.168.0.254,
+Netmask - 255.255.255.0,
+Gateway - 0.0.0.0,
+Primary DNS: 0.0.0.0,
+Secondary DNS: 0.0.0.0,
+MTU Size:1500,
+Mode: 802.11b/g/n,
+
+
 ## VIM 
 
 1) Best video - (1) https://youtu.be/_NUO4JEtkDw (2) VIM + tmux - https://youtu.be/5r6yzFEXajQ
