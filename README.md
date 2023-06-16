@@ -10,6 +10,10 @@
 [rpilink]: https://robu.in/product/raspberry-pi-4-model-b-8gb-starter-kit/?gclid=CjwKCAjwkLCkBhA9EiwAka9QRkXvehp1eUdSgwkAgVF37yJyJTX_pxnJmlBz8wtE63cy9Ec5fIf58RoCWRkQAvD_BwE
 
 ## TP link wifi router information
+[better to go with default- make router in AP mode] <br>
+Just follow the steps in this video for AP - [link][tplink_vid]
+
+[tplink_vid]: https://youtu.be/ISUSlTcgWks
 
 username - ```hcrlab``` <br>
 password - ```hcrlab8318``` <br>
