@@ -1,5 +1,7 @@
 ## Rpi4 8 gb RAM
-
+1) Download raspberry pi imager - https://www.raspberrypi.com/software/
+2) Select -> Other general-purpose OS -> Ubuntu -> Ubuntu Server 20.04.5 LTS (64-bit)
+3) 
 
 ## TP link wifi router information
 
