@@ -18,8 +18,9 @@
 	(four spaces) password: "hcrlab8318" <br>
 	    (consider four spaces for tab in yaml file)
 	    
-5) Install ROS Noetic [link][noeticlink]
-  1) Install "ROS-Base: (Bare Bones)" (Not full ROS) <br>
+5) Install ROS Noetic [link][noeticlink] <br>
+   1) Install "ROS-Base: (Bare Bones)" (Not full ROS) <br>
+ 
   [noeticlink]: http://wiki.ros.org/noetic/Installation/Ubuntu
    
 
