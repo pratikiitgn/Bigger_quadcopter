@@ -36,6 +36,9 @@
    6) ```wstool merge -t src /tmp/mavros.rosinstall```
    7) ```wstool update -t src -j4```
    8) ```rosdep install --from-paths src --ignore-src -y ``` 
+   9) ```./src/mavros/mavros/scripts/install_geographiclib_datasets.sh```
+   10) ```catkin build```
+   11) ```source devel/setup.bash```
 
 
 
