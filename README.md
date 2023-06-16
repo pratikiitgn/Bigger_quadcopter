@@ -33,9 +33,9 @@
    3) ```wstool init src```
    4) ```rosinstall_generator --rosdistro kinetic mavlink | tee /tmp/mavros.rosinstall```
    5) ```rosinstall_generator --upstream mavros | tee -a /tmp/mavros.rosinstall```
-   6) ```wstool merge -t src /tmp/mavros.rosinstall
-wstool update -t src -j4
-rosdep install --from-paths src --ignore-src -y```
+   6) ```wstool merge -t src /tmp/mavros.rosinstall```
+   7) ```wstool update -t src -j4```
+   8) ```rosdep install --from-paths src --ignore-src -y ``` 
 
 
 
