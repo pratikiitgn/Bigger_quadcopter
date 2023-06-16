@@ -1,3 +1,6 @@
+## Rpi4 8 gb RAM
+
+
 ## TP link wifi router information
 
 username - ```hcrlab``` <br>
