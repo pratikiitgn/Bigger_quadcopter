@@ -1,7 +1,7 @@
 ## Rpi4 8 gb RAM
 1) Download raspberry pi imager - https://www.raspberrypi.com/software/
 2) Select -> Other general-purpose OS -> Ubuntu -> Ubuntu Server 20.04.5 LTS (64-bit)
-3) 
+3) Go to settings (gear icon) -> i) Set hostname = raspberrypi2, ii) Enable SSH = tick Use password authentication, iii) username - raspberrypi2, password - raspberry, iv) Configure wireless LAN: SSID - pratik, password - hcrlab8318
 
 ## TP link wifi router information
 
