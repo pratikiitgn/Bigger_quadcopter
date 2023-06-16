@@ -19,7 +19,8 @@
 	    (consider four spaces for tab in yaml file)
 	    
 5) Install ROS Noetic [link][noeticlink] <br>
-   1) Install "ROS-Base: (Bare Bones)" (Not full ROS) <br>
+   1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
+   2) To source the environment ```source /opt/ros/noetic/setup.bash```
  
   [noeticlink]: http://wiki.ros.org/noetic/Installation/Ubuntu
    
