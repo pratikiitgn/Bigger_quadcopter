@@ -1,6 +1,6 @@
 ## TP link wifi router information
 
-username - hcrlab\,
+username - hcrlab\\
 password - hcrlab8318\,
 ip address - 192.168.0.254,
 Netmask - 255.255.255.0,
