@@ -13,18 +13,11 @@
 [better to go with default- make router in AP mode] <br>
 Just follow the steps in this video for AP - [link][tplink_vid]
 
+The default ip address would be - 192.168.0.254 (For more info see at the back of the device)
 [tplink_vid]: https://youtu.be/ISUSlTcgWks
-
+We have following username and password of the router <br>
 username - ```hcrlab``` <br>
 password - ```hcrlab8318``` <br>
-ip address - ```192.168.0.254```, <br>
-Netmask - ```255.255.255.0```, <br>
-Gateway - ```0.0.0.0```, <br>
-Primary DNS: ```0.0.0.0```, <br>
-Secondary DNS: ```0.0.0.0```,<br>
-MTU Size:```1500```, <br>
-Mode: ```802.11b/g/n```, <br>
-
 
 ## VIM 
 
