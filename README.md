@@ -56,10 +56,10 @@
 
 ## TP link wifi router information
 [better to go with default- make router in AP mode] <br>
-Just follow the steps in this video for AP - [link][tplink_vid]
+Just follow the steps in this video for AP - [link][tplinkvid]
 
 The default ip address would be - 192.168.0.254 (For more info see at the back of the device)
-[tplink_vid]: https://youtu.be/ISUSlTcgWks
+[tplinkvid]: https://youtu.be/ISUSlTcgWks
 We have following username and password of the router <br>
 username - ```hcrlab``` <br>
 password - ```hcrlab8318``` <br>
