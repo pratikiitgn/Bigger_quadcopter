@@ -48,6 +48,9 @@
    10) ```catkin build```
    11) ```source devel/setup.bash```
 
+7) Check mavros is running or not (Note: Make sure you connect your RPI with pixhawk using USB connection) <br>
+   1) Open a terminal and type ```roslaunch mavros px4.launch```
+
 
 
 
