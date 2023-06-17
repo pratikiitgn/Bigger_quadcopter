@@ -1,3 +1,8 @@
+## Tmux 
+1) Install tmux by ```sudo apt-get install tmux```
+2) To close the terminal type ```exit``` in that terminal
+3) To start new terminal i) First press ```ctrl + B``` ia) to add terminal in right side ```shift + 5``` ib) to add terminal below ```shift + " ```
+
 ## Rpi4 8 gb RAM ([link][rpilink])
 1) Download raspberry pi imager - https://www.raspberrypi.com/software/
 2) Select -> Other general-purpose OS -> Ubuntu -> Ubuntu Server 20.04.5 LTS (64-bit)
