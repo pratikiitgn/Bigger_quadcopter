@@ -62,11 +62,11 @@
 7) Check mavros is running or not (Note: Make sure you connect your RPI with pixhawk using USB connection) <br>
    1) Open a terminal and type ```roslaunch mavros px4.launch```
 
-
-
-
 [mavrosfromsource]:https://docs.px4.io/main/en/ros/mavros_installation.html#source-installation
 
+## Making a custom node to get the drone's data
+
+1) 
 
 ## TP link wifi router information
 [better to go with default- make router in AP mode] <br>
