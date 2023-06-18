@@ -54,10 +54,10 @@
    10) ```catkin build```
    11) ```source devel/setup.bash```
    12) Add  ```source devel/setup.bash``` to .bashrc file as follow. <br>
-      1) go to home directory or just type ```cd```
-      2) open bashrc file ```nano ~/.bashrc```
-      3) Paste this line at the end ```source devel/setup.bash```
-      4) Save it and source the bashrc file as ```source /.bashrc```
+      i) go to home directory or just type ```cd``` <br>
+      ii) open bashrc file ```nano ~/.bashrc``` <br>
+      iii) Paste this line at the end ```source devel/setup.bash``` <br>
+      iv) Save it and source the bashrc file as ```source /.bashrc``` <br>
 
 7) Check mavros is running or not (Note: Make sure you connect your RPI with pixhawk using USB connection) <br>
    1) Open a terminal and type ```roslaunch mavros px4.launch```
