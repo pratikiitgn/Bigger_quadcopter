@@ -42,7 +42,7 @@
    6) ```wstool merge -t src /tmp/mavros.rosinstall```
    7) ```wstool update -t src -j4```
    8) ```rosdep install --from-paths src --ignore-src -y ``` 
-   9) ```./src/mavros/mavros/scripts/install_geographiclib_datasets.sh``` (This line will through some error.) Solve this by <br> 
+   9) ```sudo ./src/mavros/mavros/scripts/install_geographiclib_datasets.sh``` (This line will through some error.) Solve this by <br> 
      i) Download the missing files as follows <br>
         ```wget https://sourceforge.net/projects/geographiclib/files/magnetic-distrib/emm2015.tar.bz2 --no-check-certificate``` <br>
 	```wget https://sourceforge.net/projects/geographiclib/files/gravity-distrib/egm96.tar.bz2 --no-check-certificate``` <br>
