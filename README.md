@@ -23,8 +23,8 @@
         "hcrlab": <br>
 	(four spaces) password: "hcrlab8318" <br>
 	    (consider four spaces for tab in yaml file)
-	    
-5) Install ROS Noetic [link][noeticlink] <br>
+
+## Install ROS Noetic [link][noeticlink] <br>
    1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
    2) To source the environment type this ```source /opt/ros/noetic/setup.bash``` in your bashrc file by ```echo "source /opt/ros/noetic/setup.bash" >> ~/. bashrc``` and then source by ```source ~/.bashrc```
    3) Make a catkin workspace by ```mkdir -p ~/catkin_ws/src``` and Go to catkin_ws ```cd ~/catkin_ws/```
@@ -33,7 +33,7 @@
  
   [noeticlink]: http://wiki.ros.org/noetic/Installation/Ubuntu
    
-6) Install MAVROS from source - ([link][mavrosfromsource]) <br>
+1) Install MAVROS from source - ([link][mavrosfromsource]) <br>
    1) ```cd ~/catkin_ws```
    2) ```catkin init```
    3) ```wstool init src```
@@ -59,7 +59,7 @@
       iii) Paste this line at the end ```source devel/setup.bash``` <br>
       iv) Save it and source the bashrc file as ```source /.bashrc``` <br>
 
-7) Check mavros is running or not (Note: Make sure you connect your RPI with pixhawk using USB connection) <br>
+2) Check mavros is running or not (Note: Make sure you connect your RPI with pixhawk using USB connection) <br>
    1) Open a terminal and type ```roslaunch mavros px4.launch```
 
 [mavrosfromsource]:https://docs.px4.io/main/en/ros/mavros_installation.html#source-installation
