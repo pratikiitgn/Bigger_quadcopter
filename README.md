@@ -24,6 +24,8 @@
 	(four spaces) password: "hcrlab8318" <br>
 	    (consider four spaces for tab in yaml file)
 
+5) To shutdown the RPI ```sudo shutdown now```
+
 ## Install ROS Noetic [link][noeticlink] <br>
    1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
    2) To source the environment type this ```source /opt/ros/noetic/setup.bash``` in your bashrc file by ```echo "source /opt/ros/noetic/setup.bash" >> ~/. bashrc``` and then source by ```source ~/.bashrc```
