@@ -26,7 +26,7 @@
 
 5) To shutdown the RPI ```sudo shutdown now```
 
-## Install ROS Noetic [link][noeticlink] <br>
+## Install ROS Noetic and MAVROS [link][noeticlink] <br>
    1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
    2) To source the environment type this ```source /opt/ros/noetic/setup.bash``` in your bashrc file by ```echo "source /opt/ros/noetic/setup.bash" >> ~/. bashrc``` and then source by ```source ~/.bashrc```
    3) Make a catkin workspace by ```mkdir -p ~/catkin_ws/src``` and Go to catkin_ws ```cd ~/catkin_ws/```
