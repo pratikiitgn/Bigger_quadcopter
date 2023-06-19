@@ -66,9 +66,10 @@
 
 [mavrosfromsource]:https://docs.px4.io/main/en/ros/mavros_installation.html#source-installation
 
-## Making a custom node to get the drone's data
-
-1) 
+## Making a custom ROS package 'hcrlab'
+1) Go to catkin/src by ```cd catkin_ws/src```
+2) Make a package by commands ```catkin_create_pkg hcrlab std_msgs rospy roscpp sensor_msgs``` - here we have added 'sensor_msgs' dependency which is used to get the drone's data
+3) go to catkin_ws and build the package by i) cd ```cd catkin_ws``` and ```catkin build```
 
 ## TP link wifi router information
 [better to go with default- make router in AP mode] <br>
