@@ -11,11 +11,12 @@
 - NuttX: It is the operating system PX4 runs on. Everything in PX4 runs on NuttX
 - Modules: It divide the tasks. They do flight modes, velocity control, state estimator, flight control, position control, ground station communication
 - Drivers: It is a translator between the Hardware (all the sensors) and PX4
-- uORB: Communication channels between all the tasks
+- uORB: Communication channels between all the tasks (check out all the uORB messages - [link][uORBmessages])
 - 
 
 [px4funda]: https://youtu.be/-1MASuJDGn4
 [linux_px4]: https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
+[uORBmessages]:https://docs.px4.io/main/en/middleware/uorb_graph.html
 
 ## Extras
 1) Link to xml file where ID of the messages are defined - /home/pratik/catkin_ws/src/mavlink/message_definitions/v1.0
