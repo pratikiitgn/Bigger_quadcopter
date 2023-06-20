@@ -1,3 +1,7 @@
+## Extras
+1) Link to xml file where ID of the messages are defined - /home/pratik/catkin_ws/src/mavlink/message_definitions/v1.0
+
+
 ## Tmux 
 1) Install tmux by ```sudo apt-get install tmux```
 2) To start new terminal i) First press ```ctrl + B``` ia) to add terminal in right side ```shift + 5``` ib) to add terminal below ```shift + " ```
