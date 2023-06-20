@@ -5,14 +5,21 @@
 
 
 
-## PX4 development environment for linux ([link][linux_px4])
-1) install PX4 autopilot ```git clone https://github.com/PX4/PX4-Autopilot.git --recursive```
-2) Best Youtube video on PX4 fundamentals [link][px4funda]
-- NuttX: It is the operating system PX4 runs on. Everything in PX4 runs on NuttX
-- Modules: It divide the tasks. They do flight modes, velocity control, state estimator, flight control, position control, ground station communication
-- Drivers: It is a translator between the Hardware (all the sensors) and PX4
-- uORB: Communication channels between all the tasks (check out all the uORB messages - [link][uORBmessages])
-- 
+## PX4 development environment for linux ([link][linux_px4]) <br>
+Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as follows. <br>
+### Part 1: High level overview of PX4 architecture
+
+   - NuttX: It is the operating system PX4 runs on. Everything in PX4 runs on NuttX
+   - Modules: These divides the tasks. They do flight modes, velocity control, state estimator, flight control, position control, ground station communication
+   - Drivers: It is a translator between the Hardware (all the sensors) and PX4
+   - uORB: Communication channels between all the tasks (check out all the uORB messages - [link][uORBmessages])
+   - Parameters: (It can be accessed from src/modules/battery_status/module.yaml) <br>
+### Part 2: Development Environment Setup
+
+   - install PX4 autopilot ```git clone https://github.com/PX4/PX4-Autopilot.git --recursive```
+   - ```cd PX4-Autopilot```
+   - 
+
 
 [px4funda]: https://youtu.be/-1MASuJDGn4
 [linux_px4]: https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
