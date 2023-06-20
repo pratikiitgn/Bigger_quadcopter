@@ -1,3 +1,20 @@
+## ROS2 with PX4
+1) Useful video on ROS2 wtih PX4 ([link][ros2_px4_])
+
+[ros2_px4_]:https://youtu.be/qhLATrkA_Gw
+
+
+
+## PX4 development environment for linux ([link][linux_px4])
+1) install PX4 autopilot ```git clone https://github.com/PX4/PX4-Autopilot.git --recursive```
+2) Best Youtube video on PX4 fundamentals [link][px4funda]
+- NuttX: It is the operating system PX4 runs on. Everything in PX4 runs on NuttX
+- Modules: It divide the tasks. They do flight modes, velocity control, state estimator, flight control, position control, ground station communication
+
+
+[px4funda]: https://youtu.be/-1MASuJDGn4
+[linux_px4]: https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
+
 ## Extras
 1) Link to xml file where ID of the messages are defined - /home/pratik/catkin_ws/src/mavlink/message_definitions/v1.0
 
