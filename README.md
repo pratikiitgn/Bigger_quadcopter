@@ -10,7 +10,9 @@
 2) Best Youtube video on PX4 fundamentals [link][px4funda]
 - NuttX: It is the operating system PX4 runs on. Everything in PX4 runs on NuttX
 - Modules: It divide the tasks. They do flight modes, velocity control, state estimator, flight control, position control, ground station communication
-
+- Drivers: It is a translator between the Hardware (all the sensors) and PX4
+- uORB: Communication channels between all the tasks
+- 
 
 [px4funda]: https://youtu.be/-1MASuJDGn4
 [linux_px4]: https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
