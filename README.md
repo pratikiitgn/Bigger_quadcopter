@@ -59,6 +59,12 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
   - Would you like a login shell to be accesible over serial? -> [No] <br>
   - Would you like the serial port hardware to be enabled? -> [Yes]
   - reboot the Rpi
+4) Hardware permissions for Serial : You may want to add your user to the dialout group, to avoid errors such as: serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyACM0: [Errno 13] Permission denied: ‘/dev/ttyACM0’.
+  - Use the code ```sudo adduser your_username dialout```
+5) Install Python Serial library on Raspberry Pi <br>
+   a) To install pip ```sudo apt install python3-pip``` <br>
+   b) To install pyserial library ```python3 -m pip install pyserial``` <br>
+
 ### To enable wifi communication <br>
    go to ```/etc/netplans``` <br>
    type the command - ```sudo nano 50-cloud-init.yaml``` <br>
