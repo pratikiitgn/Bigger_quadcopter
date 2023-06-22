@@ -36,6 +36,7 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
 4) To close the terminal type ```exit``` in that terminal
 
 ## Rpi4 8 gb RAM ([link][rpilink])
+### Ubuntu Server 20.04.5 LTS (64-bit)
 1) Download raspberry pi imager - https://www.raspberrypi.com/software/
 2) Select -> Other general-purpose OS -> Ubuntu -> Ubuntu Server 20.04.5 LTS (64-bit)
 3) Go to settings (gear icon) <br> 
@@ -45,6 +46,19 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
     iv) Configure wireless LAN: SSID - ```pratik```, password - ```hcrlab8318``` <br>
 
 [rpilink]: https://robu.in/product/raspberry-pi-4-model-b-8gb-starter-kit/?gclid=CjwKCAjwkLCkBhA9EiwAka9QRkXvehp1eUdSgwkAgVF37yJyJTX_pxnJmlBz8wtE63cy9Ec5fIf58RoCWRkQAvD_BwE
+
+### To enable UART Communication
+1) Run the code ```sudo raspi-config```
+  - If you get the error like ```sudo: raspi-config command not found```
+  - Install raspi-config using the code as given below <br>
+ ```wget https://archive.raspberrypi.org/debian/pool/main/r/raspi-config/raspi-config_20200601_all.deb -P /tmp```<br>
+ ```sudo apt-get install libnewt0.52 whiptail parted triggerhappy lua5.1 alsa-utils -y``` <br>
+ ```sudo apt-get install -fy``` <br>
+ ```sudo dpkg -i /tmp/raspi-config_20200601_all.deb```
+3) Go to 5 Interfacing Options -> P6 Serial -> <br>
+  - Would you like a login shell to be accesible over serial? -> [No] <br>
+  - Would you like the serial port hardware to be enabled? -> [Yes]
+  - reboot the Rpi
 
 4) To enable wifi communication <br>
    go to ```/etc/netplans``` <br>
