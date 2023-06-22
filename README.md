@@ -59,17 +59,15 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
   - Would you like a login shell to be accesible over serial? -> [No] <br>
   - Would you like the serial port hardware to be enabled? -> [Yes]
   - reboot the Rpi
-
-4) To enable wifi communication <br>
+### To enable wifi communication <br>
    go to ```/etc/netplans``` <br>
    type the command - ```sudo nano 50-cloud-init.yaml``` <br>
    1) First remove ```render - network```
    2) below "access-points": <br>
         "hcrlab": <br>
 	(four spaces) password: "hcrlab8318" <br>
-	    (consider four spaces for tab in yaml file)
-
-5) To shutdown the RPI ```sudo shutdown now```
+	    (consider four spaces for tab in yaml file)<br>
+   3) To shutdown the RPI ```sudo shutdown now```
 
 ## Install ROS Noetic and MAVROS [link][noeticlink] <br>
    1) Install "ROS-Base: (Bare Bones)" (Not full ROS) ```sudo apt install ros-noetic-ros-base```  <br>
