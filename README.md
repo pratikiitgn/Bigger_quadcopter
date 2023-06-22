@@ -64,8 +64,9 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
 5) Install Python Serial library on Raspberry Pi <br>
    a) To install pip ```sudo apt install python3-pip``` <br>
    b) To install pyserial library ```python3 -m pip install pyserial``` <br>
-6) Make a CAM_device.py file. a) Paste the code b) make it executable by ```chmod +x CAM_device.py```
-  
+6) Make a CAM_device.py file. a) Paste the code [link][camdevicecode] b) make it executable by ```chmod +x CAM_device.py```
+
+  [camdevicecode]:https://github.com/pratikiitgn/Bigger_quadcopter/blob/main/RaspberryPi/CAM_device.py
 
 ### To enable wifi communication <br>
    go to ```/etc/netplans``` <br>
