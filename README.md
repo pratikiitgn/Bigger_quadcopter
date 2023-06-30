@@ -1,3 +1,8 @@
+## To communicate between two ROS devices
+
+1) https://husarion.com/tutorials/ros-tutorials/5-running-ros-on-multiple-machines/
+
+
 ## Gazebo ROS
 
 1) To install gazebo_ros package -  https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros
