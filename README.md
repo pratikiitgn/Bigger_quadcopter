@@ -1,3 +1,8 @@
+## Gazebo ROS
+
+1) To install gazebo_ros package -  https://classic.gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros
+
+
 ## ROS2 with PX4
 1) Useful video on ROS2 wtih PX4 ([link][ros2_px4_])
 
