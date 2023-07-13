@@ -91,7 +91,13 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
 ### To enable on/off Rpi by switch
 
 1) It is mandwtory to have a push button [link][pushbutton]
-2) Go to config file by ```sudo nano /boot/config/txt```
+2) Go to config file by ```sudo nano /boot/config.txt``` add following text.
+    ```dtoverlay=gpio-shutdown```
+3) Update the bootloder using following code
+    ```sudo apt update ```
+    ```sudo apt full-upgrade```
+    ```sudo apt install rpi-eeprom```
+    ```sudo rpi-eeprom-update```
 
 [pushbutton]:https://www.electronicscomp.com/push-button-spst-on-off-switch?gclid=CjwKCAjwwb6lBhBJEiwAbuVUSr3fsi_ydaZahDxkuTAKQDShHD6ZyhtXRaB8YJN0UJccNHmBy7ZsCBoCr5wQAvD_BwE
 ## Install ROS Noetic and MAVROS [link][noeticlink] <br>
