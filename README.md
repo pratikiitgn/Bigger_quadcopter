@@ -92,6 +92,9 @@ if gui opens up try ```ctrl +alt + F3``` for text mode(terminal) <br>
 	    (consider four spaces for tab in yaml file)<br>
    3) To shutdown the RPI ```sudo shutdown now```
 
+### To make static ip address to Rpi
+https://phoenixnap.com/kb/raspberry-pi-static-ip
+
 ### To enable on/off Rpi by switch
 
 1) It is mandwtory to have a push button [link][pushbutton]
