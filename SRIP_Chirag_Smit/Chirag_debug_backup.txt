@@ -1,0 +1,276 @@
+In this file I have mentioned the various steps (from basics for this project)
+
+1. Install ubuntu server 20.04.5 LTS on raspberry pi using raspberry pi imager.
+2. Connect raspberry pi to your local network with internet connection (https://linuxconfig.org/ubuntu-20-04-connect-to-wifi-from-command-line)
+   You can check if you are succesful by running ($ ping google.com)
+3. Run $sudo apt-get update, $sudo apt-get upgrade
+4. Install ROS by following these links: (https://roboticsbackend.com/install-ros-on-raspberry-pi-3/ , http://wiki.ros.org/noetic/Installation/Ubuntu)
+5. If you want to add additional ROS packages use ($sudo apt install ros-noetic-PACKAGE_NAME)
+6. Build catkin workspace and install dependencies mavlink mavros ( mavlink mavros: https://github.com/mavlink/mavros/blob/master/mavros/README.md#installation , catkin: https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/installing_ros.md, http://wiki.ros.org/ROS/Tutorials/CreatingPackage)
+https://gist.github.com/dbaldwin/4695149740e59a9d998f4e95fbe1d298
+7. CTU MRS git hub: https://ctu-mrs.github.io/
+https://www.hackster.io/korigod/programming-drones-with-raspberry-pi-on-board-easily-b2190e*
+
+
+
+https://docs.px4.io/main/en/ros/ros1.html
+https://www.raspberrypi.com/documentation/computers/configuration.html
+https://ardupilot.org/dev/docs/raspberry-pi-via-mavlink.html
+https://ardupilot.org/mavproxy/docs/getting_started/download_and_installation.html#mavproxy-downloadinstalllinux
+run where mavproxy is there
+/dev/ttyAMC check in dev folder which new file is formed on connecting pixhawk
+https://www.youtube.com/watch?v=DGAB34fJQFc
+https://www.hackster.io/dmitrywat/ros-melodic-on-raspberry-pi-4-debian-buster-rplidar-a1m8-0d63d1
+use ros.txt in this repo for ros.asc
+https://gist.github.com/dbaldwin/4695149740e59a9d998f4e95fbe1d298
+Launch MAVROS and see Pixhawk telemetry!
+roslaunch mavros px4.launch
+use https://sourceforge.net/projects/geographiclib/files/magnetic-distrib/ for geographic lib error files
+download tar --no-check-certificate, extract, copy and paste to usr/share/GeographicLib
+cp -R ./magnetic /usr/share.GeographicLib 
+if gui opens up try ctrl +alt + F3 for text mode(terminal)
+ctrl + alt + F2 for GUI
+https://github.com/tmux/tmux
+https://ctu-mrs.github.io/docs/introduction/suggested_reading.html
+https://github.com/tmuxinator/tmuxinator
+tmux:
+///here and means leave prev keys
+new session start: tmux
+hierarchy:  session>>windows>>panes
+new pane:
+to the right :ctrl + b and %(shift+5)
+to the bottom : ctrl + b and "(shift + ')
+make as many as you want
+switch panes: ctrl + b + left/right arror
+new window:
+ctrl +b and c  
+change windows:
+ctrl + b and 0/1/2... as on the green banner below
+rename window: ctrl + b and , then type name (see yellow box below) and hit enter
+detach from  a session: ctrl + b and d    if using ssh then no need to worry you can continue from where you left
+view running tmux sessions : tmux ls
+attach to the session: tmux attach -t name_of_session_eg_0
+rename session: tmux rename-session -t current_name_of_session name_you_want
+new session with name: tmux new -s name_you_want
+kill session: tmux kill-session -t name_of_session
+sessions runs in background unless closed or system reboot ///
+
+Vim:
+
+///use $ vimtutor    to get basic commands
+(see bottom to know the mode you are in)
+h(left) j(down) k(up) l(right) or use arrow keys to navigate
+:q!  exit without saving
+x delete text
+esc normal mode
+i insert text mode behind
+a append text mode ahead (same as i just direction of text adding changes)
+vim file_name :to open a file for editing, if no file then creates new file
+:wq to save and exit
+go to starting word of the word to be removed and type dw to delete it
+type d$ at the start of character from which you wish to delete everything (trailing characters get deleted)
+d<-operator w/$/e<-motion(tells what to operate on) : w- until start of next word excluding its first character, e- end of current word including last character, $ to the end of line including the last character,d whole line
+typing a number before motion repeats it that many times (d2w delete two two words,2w move two words forward, 3e move 3words forward but at last letter of 3rd word, 0 to get to start of word)
+dd delets the whole line
+u to undo last command, U to bring whole line to original form 
+ctrl+R to undo the undo's
+to put back text that has just been deleted, type p , this puts the deleted text after the cursor(if a line was deleted (dd)(only one line in vim register)it will go on the line below the cursor)
+to replace the character under the cursor, type r and then the character you want to have there
+the change operator allows you to change from the cursor to where the motion takes you. eg. type ce to change from the cursor to the end of the word, c$ to change to the end of a line
+the format for change is: c [number] motion 
+ctrl+G shows current file location and it's status
+G moves to end of file, gg moves to first line, [line number]+G to move to that line
+to find phrases: / followed by phrase searches forward for the phrase ? followed by phrase searches backward, n to find next occurrence in same directionand N prev occurrence, 
+ctrl+O takes to older position of yours in file and crtl+I newer
+typing % while the cursor is on a (,);[,];{,} goes to it's macth used for debugging missing brackets///
+substitute:  new in place of first old in the line:  :s/old/new , new for all old in the line:  :s/old/new/g , new in place of old between two lines for no. # and # #,#s/old/new/g , new in place of old in whole file :%s/old/new/g  to ask for confirmation while doing this :%s/old/new/gc
+for running external commands:  : !command   eg. : !ls  lists files in current directory
+:w file_name writes the current Vim file to disk with name file_name
+pressing v enter into selection mode
+v motion :w file_name saves the visually selected lines in the file file_name    in motion here you have to move your cursor to select the text you want
+v motion d   deletes the selected text where d is the operator, you can use operator of your choice
+:r file_name retrieves disk file file_name and puts it below the current position , you can also use external commands in place of file_name like :r !ls and it puts that commands output below the current cursor position
+a,i,A all go to the same insert mode
+type o to open a line below O to open a line above cursor and enter insert mode
+type a to insert text after the cursor and A to insert text after the end of the line
+e command moves to the end of a word
+type capital R to start replacing characters until esc pressed
+copy paste text: enter visual mode, select text, press y(yank) to copy, press p to paste, yw to copy one word
+typing  :set xxx sets the option xxx. some options are ic/ignorecase  ignores upper/lower case when searching ; is/incsearch shoes partial matches ; hls/hlssearch highlights matches
+if want to ignore case for just one search command, use \c i.e. /ignore\c
+prepend no to switch an option off:  :set noic
+type :help or press F1 or HELP to open a help window; type :help cmd to find help on cmd; type ctrl-W ctrl-W to jump to another window; :q to close the help window
+can create vimrc startup script to keep your preferred settings
+when typing a : command, press CTRL-D to see possible completions ; press tab to use one completion///
+
+https://docs.px4.io/main/en/ros/mavros_offboard_python.html
+
+roslaunch offboard_py start_offb.launch
+or in dir where script is there type $python3 scriptname.py
+
+mavlink and mavros is in :  /opt/ros/noetic/share
+
+px4 does not support cube orange plus yet
+https://docs.px4.io/main/en/peripherals/serial_configuration.html
+
+if drone_pkg not found error then due to different python version use $ unset PYTHONPATH
+
+connecting ROSes:
+export ROS_MASTER_URI=http://(rosmaster_ip):11311
+export ROS_IP=(current_device_ip)
+http://kashishdhal.me/ros-communication-between-different-computers/
+https://husarion.com/tutorials/ros-tutorials/5-running-ros-on-multiple-machines/
+http://wiki.ros.org/ROS/Tutorials/MultipleMachines
+http://wiki.ros.org/ROS/NetworkSetup
+to kill all roscore/master use: killall -9 roscore and killall -9 rosmaster
+do ros master uri and ros hostname in both the devices!!!
+
+https://github.com/PX4/PX4-Autopilot/blob/main/integrationtests/python_src/px4_it/mavros/mavros_offboard_attctl_test.py
+https://github.com/mavlink/mavros/issues/792
+
+pi@raspberrypi:  raspberrypi is the device name and it denotes the ip address so in ROS_MASTER_URI=http://device_name:11311 should come
+for ssh to it can be ssh pi@raspberrypi or ssh pi@192.128.1.254 something like that
+
+/mavros/imu/data: angular vel, linear vel, orientation
+/mavros/imu/data_raw:  angular vel, linear vel
+
+start rviz by typing: rviz
+https://docs.m2stud.io/cs/ros_additional/06-L3-rviz/
+
+shutdown raspberry by switch:
+https://learn.sparkfun.com/tutorials/raspberry-pi-safe-reboot-and-shutdown-button/all
+https://pypi.org/project/RPi.GPIO/
+https://cms.gutow.uwosh.edu/Gutow/useful-chemistry-links/software-tools-and-coding/computer-and-coding-how-tos/allowing-access-to-gpio-i2c-and-spi-on-pi-under-ubuntu-20.04
+https://ubuntu.com/tutorials/gpio-on-raspberry-pi#1-overview
+
+https://github.com/mavlink/mavros/issues/1346   
+https://github.com/mavlink/mavros/issues/1557 increase frequency of messages
+--find the original link of solution
+do rosrun mavros mavcmd long 511 31 5000 0 0 0 0 0    for ATTITUDE_QUATERNION i.e. imu/data
+do rosrun mavros mavcmd long 511 105 5000 0 0 0 0 0    for HIGHRES_IMU i.i /mavros/imu/data  
+
+here 31 and 105 are parameters, 5000 is :  5000 gives 200Hz, 10000 give 100Hz   i.e. time is running in microsecond ranges, 511 is something which helps mavros, long is data type(function) of mavros, and 7 commands after 511 are different parameters
+
+mavcmd is in ros             include/lib/  or mavros/scripts/mavcmd
+
+namespace and node names changed for 2 drones
+
+https://www.youtube.com/watch?v=A-1DBhWF_64 follow this tutorial for ROS
+https://docs.px4.io/main/en/advanced_config/prearm_arm_disarm.html
+https://docs.px4.io/main/en/flight_modes/offboard.html
+https://answers.ros.org/question/233353/set-delay-between-starting-nodes-within-launch-file/
+
+some services:
+https://clover.coex.tech/en/simple_offboard.html
+
+only one node per script, run multiple scripts by putting this at top of your script:
+import os 
+os.system("rosrun my_package_name my_node_script.py")
+
+///
+0: HEARTBEAT
+1: SYS_STATUS
+2: SYSTEM_TIME
+4: PING
+5: CHANGE_OPERATOR_CONTROL
+6: CHANGE_OPERATOR_CONTROL_ACK
+7: AUTH_KEY
+11: SET_MODE
+20: PARAM_REQUEST_READ
+21: PARAM_REQUEST_LIST
+22: PARAM_VALUE
+23: PARAM_SET
+24: GPS_RAW_INT
+25: GPS_STATUS
+26: SCALED_IMU
+27: RAW_IMU
+28: RAW_PRESSURE
+29: SCALED_PRESSURE
+30: ATTITUDE
+31: ATTITUDE_QUATERNION
+32: LOCAL_POSITION_NED
+33: GLOBAL_POSITION_INT
+34: RC_CHANNELS_SCALED
+35: RC_CHANNELS_RAW
+36: SERVO_OUTPUT_RAW
+37: MISSION_REQUEST_PARTIAL_LIST
+38: MISSION_WRITE_PARTIAL_LIST
+39: MISSION_ITEM
+40: MISSION_REQUEST
+41: MISSION_SET_CURRENT
+42: MISSION_CURRENT
+43: MISSION_REQUEST_LIST
+44: MISSION_COUNT
+45: MISSION_CLEAR_ALL
+46: MISSION_ITEM_REACHED
+47: MISSION_ACK
+48: SET_GPS_GLOBAL_ORIGIN
+49: GPS_GLOBAL_ORIGIN
+50: SET_LOCAL_POSITION_SETPOINT
+51: LOCAL_POSITION_SETPOINT
+52: GLOBAL_POSITION_SETPOINT_INT
+53: SET_GLOBAL_POSITION_SETPOINT_INT
+54: SAFETY_SET_ALLOWED_AREA
+55: SAFETY_ALLOWED_AREA
+56: SET_ROLL_PITCH_YAW_THRUST
+57: SET_ROLL_PITCH_YAW_SPEED_THRUST
+58: ROLL_PITCH_YAW_THRUST_SETPOINT
+59: ROLL_PITCH_YAW_SPEED_THRUST_SETPOINT
+60: SET_QUAD_MOTORS_SETPOINT
+61: SET_QUAD_SWARM_ROLL_PITCH_YAW_THRUST
+62: NAV_CONTROLLER_OUTPUT
+63: SET_QUAD_SWARM_LED_ROLL_PITCH_YAW_THRUST
+64: STATE_CORRECTION
+65: RC_CHANNELS
+66: REQUEST_DATA_STREAM
+67: DATA_STREAM
+69: MANUAL_CONTROL
+70: RC_CHANNELS_OVERRIDE
+73: MISSION_ITEM_INT
+74: VFR_HUD
+75: COMMAND_INT
+76: COMMAND_LONG
+77: COMMAND_ACK
+81: MANUAL_SETPOINT
+82: SET_ATTITUDE_TARGET
+83: ATTITUDE_TARGET
+84: SET_POSITION_TARGET_LOCAL_NED
+85: POSITION_TARGET_LOCAL_NED
+86: SET_POSITION_TARGET_GLOBAL_INT
+87: POSITION_TARGET_GLOBAL_INT
+89: LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET
+90: HIL_STATE
+91: HIL_CONTROLS
+92: HIL_RC_INPUTS_RAW
+93: HIL_ACTUATOR_CONTROLS
+100: OPTICAL_FLOW
+101: GLOBAL_VISION_POSITION_ESTIMATE
+102: VISION_POSITION_ESTIMATE
+103: VISION_SPEED_ESTIMATE
+104: VICON_POSITION_ESTIMATE
+105: HIGHRES_IMU
+106: OPTICAL_FLOW_RAD
+107: HIL_SENSOR
+108: SIM_STATE
+109: RADIO_STATUS
+110: FILE_TRANSFER_PROTOCOL
+111: TIMESYNC
+112: CAMERA_TRIGGER
+113: HIL_GPS
+114: HIL_OPTICAL_FLOW
+115: HIL_STATE_QUATERNION
+116: SCALED_IMU2
+117: LOG_REQUEST_LIST
+118: LOG_ENTRY
+119: LOG_REQUEST_DATA
+120: LOG_DATA
+121: LOG_ERASE
+122: LOG_REQUEST_END
+123: GPS_INJECT_DATA
+124: GPS2_RAW
+125: POWER_STATUS
+126: SERIAL_CONTROL
+127: GPS_RTK
+128: GPS2_RTK
+129: SCALED
+///
