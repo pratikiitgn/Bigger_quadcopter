@@ -57,6 +57,10 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
 
 [rpilink]: https://robu.in/product/raspberry-pi-4-model-b-8gb-starter-kit/?gclid=CjwKCAjwkLCkBhA9EiwAka9QRkXvehp1eUdSgwkAgVF37yJyJTX_pxnJmlBz8wtE63cy9Ec5fIf58RoCWRkQAvD_BwE
 
+### If Ubuntu desktop opens up although you have installed Ubuntu Server
+if gui opens up try ```ctrl +alt + F3``` for text mode(terminal) <br>
+```ctrl + alt + F2``` for GUI
+
 ### To enable UART Communication
 1) Run the code ```sudo raspi-config```
   - If you get the error like ```sudo: raspi-config command not found```
