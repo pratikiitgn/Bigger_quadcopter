@@ -212,14 +212,8 @@ password - ```hcrlab8318``` <br>
 ### Building for NuttX/Pixhawk Based Boards
 
 1) Build NuttX by running this command\
-   a) for Pixhawk 2.4.8 - ```make px4_fmu-v3_default``` 
-   b) for Pixhawk Cube Orange - ```make cubepilot_cubeorange``` 
-       i) For cubeOrange following would be the serial ports locations
-           a) -- SERIAL_GPS1 /dev/ttyS2 
-	   b) -- SERIAL_GPS2 /dev/ttyS5 
-           c) -- SERIAL_TEL1 /dev/ttyS0 
-           d) -- SERIAL_TEL2 /dev/ttyS1
-3) For other board use following commands
+
+* Pixhawk Cube Orange ```make cubepilot_cubeorange``` 
 * Pixhawk 4: ```make px4_fmu-v5_default```
 * Pixhawk 4 Mini: ```make px4_fmu-v5_default```
 * CUAV V5+: ```make px4_fmu-v5_default```
@@ -228,14 +222,21 @@ password - ```hcrlab8318``` <br>
 * Pixhawk 3 Pro: ```make px4_fmu-v4pro_default```
 * Pixhawk Mini: ```make px4_fmu-v3_default```
 * Pixhawk 2 (Cube Black): ```make px4_fmu-v3_default```
-* mRo Pixhawk: ```make px4_fmu-v3_default (supports 2MB Flash)```
+* mRo Pixhawk 2.4.8 : ```make px4_fmu-v3_default (supports 2MB Flash)```
 * Holybro pix32: ```make px4_fmu-v2_default```
 * Pixfalcon: ```make px4_fmu-v2_default```
 * Dropix: ```make px4_fmu-v2_default```
 * Pixhawk 1: ```make px4_fmu-v2_default```
+  
+2) Note donw the serial ports' locations once you build the firmware. For Pixhawk CubeOrange you will get following.
+	
+	a) -- SERIAL_GPS1 /dev/ttyS2 \
+	b) -- SERIAL_GPS2 /dev/ttyS5 \
+	c) -- SERIAL_TEL1 /dev/ttyS0 \
+	d) -- SERIAL_TEL2 /dev/ttyS1
 
-3) To flash on hardware - ```make px4_fmu-v3_default upload```
-4) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
+4) To flash on hardware - ```make px4_fmu-v3_default upload```
+5) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
 
 ### Making first application - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html
 
