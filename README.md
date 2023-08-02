@@ -211,7 +211,7 @@ password - ```hcrlab8318``` <br>
 
 ### Building for NuttX/Pixhawk Based Boards
 
-1) Build NuttX by running this command for Pixhawk 2.4.8 - ```make px4_fmu-v3_default```
+1) Build NuttX by running this command for Pixhawk 2.4.8 and Pixhawk Cube Orange - ```make px4_fmu-v3_default```
 2) For other board use following commands
 * Pixhawk 4: ```make px4_fmu-v5_default```
 * Pixhawk 4 Mini: ```make px4_fmu-v5_default```
