@@ -244,7 +244,7 @@ password - ```hcrlab8318``` <br>
 
 ### Making first application - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html
 
-1) First Goto Px4-Autopilot -> src -> examples
+1) First Goto PX4-Autopilot -> src -> examples
 2) Make a directory named [px4_simple_app]. Make a .c file named [px4_simple_app.c] and paste the following basic code
 
 ``` 
@@ -272,11 +272,13 @@ px4_add_module(
     )
 ```
 
-4) Now go to Px4_developer-> Firmware -> boards -> px4 -> fmu-v3 -> open default.cmake file. and enter following line of code in it\
-```examples/px4_simple_app```
+4) A. (For Pixhawk 2.4.8) : Now go to PX4-Autopilot-> boards -> px4 -> fmu-v3 -> open default.px4board file. and enter following line of code in it\
+```CONFIG_EXAMPLES_PX4_SIMPLE_APP=y```\
+   B. (For Pixhawk CubeOrange) : Now go to PX4-Autopilot-> boards -> cubepilot -> cubeorange -> open default.px4board file. and enter following line of code in it\
+```CONFIG_EXAMPLES_PX4_SIMPLE_APP=y```
 
 
-5) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
+6) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
 
 ### Subscribing to sensor data - list of topics - https://github.com/PX4/PX4-Autopilot/tree/master/msg
 
