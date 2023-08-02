@@ -35,6 +35,9 @@ Best Youtube video on PX4 fundamentals [link][px4funda] and its summary is as fo
 [linux_px4]: https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
 [uORBmessages]:https://docs.px4.io/main/en/middleware/uorb_graph.html
 
+## MAVLINK
+To increse the rate of mavlink messages - https://github.com/mavlink/mavros/issues/305
+
 ## Extras
 1) Link to xml file where ID of the messages are defined - /home/pratik/catkin_ws/src/mavlink/message_definitions/v1.0
 
