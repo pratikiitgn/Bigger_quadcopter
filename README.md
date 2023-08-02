@@ -235,8 +235,12 @@ password - ```hcrlab8318``` <br>
 	c) -- SERIAL_TEL1 /dev/ttyS0 \
 	d) -- SERIAL_TEL2 /dev/ttyS1
 
-4) To flash on hardware - ```make px4_fmu-v3_default upload```
-5) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
+4) Flash/upload the code on hardware.
+
+	a) For Pixhawk 2.4.8 - ```make px4_fmu-v3_default upload```\
+	b) For Pixhawk CubeOrange - ```make cubepilot_cubeorange upload```
+
+6) In order to clean all the firmware - ```git submodule update --recursive```, ```make distclean```
 
 ### Making first application - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html
 
