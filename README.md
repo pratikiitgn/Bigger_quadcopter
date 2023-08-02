@@ -211,7 +211,7 @@ password - ```hcrlab8318``` <br>
 
 ### Building for NuttX/Pixhawk Based Boards
 
-1) Build NuttX by running this command
+1) Build NuttX by running this command\
    a) for Pixhawk 2.4.8 - ```make px4_fmu-v3_default``` 
    b) for Pixhawk Cube Orange - ```make cubepilot_cubeorange``` 
        i) For cubeOrange following would be the serial ports locations
