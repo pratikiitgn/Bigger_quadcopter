@@ -280,6 +280,8 @@ px4_add_module(
 
 6) Now again build the app and upload to the hardware by - ```make px4_fmu-v3_default```, ```make px4_fmu-v3_default upload```
 
+7) To see whether or not the app is built successfully, verify it by using this link - https://dev.px4.io/v1.11_noredirect/en/apps/hello_sky.html#connect-the-console
+
 ### Subscribing to sensor data - list of topics - https://github.com/PX4/PX4-Autopilot/tree/master/msg
 
 Individual message channels between applications are called topics. Take an example of sensor_combined topic. \
