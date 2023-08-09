@@ -547,4 +547,5 @@ To turn off - ```sudo shutdown -h now```\
 To configure the wifi - https://forums.raspberrypi.com/viewtopic.php?t=210245\
 To configure RX TX pin - https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c\
 
-
+## Some debugs
+1) To know the connected serial port on Ubuntu ```dmesg | grep tty```
