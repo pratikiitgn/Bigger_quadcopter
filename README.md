@@ -549,3 +549,7 @@ To configure RX TX pin - https://www.electronicwings.com/raspberry-pi/raspberry-
 
 ## Some debugs
 1) To know the connected serial port on Ubuntu ```dmesg | grep tty```
+2) If you get the error while downloading mavproxy as follows- WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLError("bad handshake: Error([('SSL routines', 'tls_process_server_certificate', 'certificate verify failed')])"))': /simple/mavproxy/
+Could not fetch URL https://pypi.org/simple/mavproxy/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/mavproxy/ (Caused by SSLError(SSLError("bad handshake: Error([('SSL routines', 'tls_process_server_certificate', 'certificate verify failed')])"))) - skipping
+ERROR: Could not find a version that satisfies the requirement mavproxy (from versions: none)
+ERROR: No matching distribution found for mavproxy-- sovle it by correcting the time and date as follows.
