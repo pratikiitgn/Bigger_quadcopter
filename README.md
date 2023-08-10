@@ -557,4 +557,4 @@ ERROR: No matching distribution found for mavproxy-- sovle it by correcting the 
 ```sudo date -s 'wed aug 09 07:14:00 IST 2023'```
 
 3) If you have error such as "Could not find the program ['arm-none-eabi-ar']"\
-install it by ```Could not find the program ['arm-none-eabi-ar']```
+install it by ```sudo apt install gcc-arm-none-eabi```
