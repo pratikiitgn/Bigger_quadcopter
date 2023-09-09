@@ -558,3 +558,7 @@ ERROR: No matching distribution found for mavproxy-- sovle it by correcting the 
 
 3) If you have error such as "Could not find the program ['arm-none-eabi-ar']"\
 install it by ```sudo apt install gcc-arm-none-eabi```
+
+## To configure 3DR Radio telemetry
+
+https://ardupilot.org/copter/docs/common-configuring-a-telemetry-radio-using-mission-planner.html#common-configuring-a-telemetry-radio-using-mission-planner
