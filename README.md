@@ -165,15 +165,20 @@ First do following connection <br>
 3. Change the IPv4 address of the ethernet cable as follows <br>
 	IP address: 192.168.0.10 <br>
 	Subnet mask: 255.255.255.0 <br>
-4. Open any browser and type this address: ```https://192.168.0.10```
+4. Open any browser and type this address: ```https://192.168.0.254``` <br>
+5. The default username and password are: <br>
+   	Username: admin
+   	password: admin
+6. We have kept is as follow: <br>
+   	Username: AeroraptorsWiFi
+   	password: blacksparrow101
+7. The wireless network is configured as given below: <br>
+	SSID:AeroraptorsWiFi
+	Password: blacksparrow101
 
-
-
-The default ip address would be - 192.168.0.254 (For more info see at the back of the device)
+The default ip address to login on webpage is 192.168.0.254 (For more info see at the back of the device)
 [tplinkvid]: https://youtu.be/ISUSlTcgWks
-We have following username and password of the router <br>
-username - ```hcrlab``` <br>
-password - ```hcrlab8318``` <br>
+
 
 ## VIM 
 
