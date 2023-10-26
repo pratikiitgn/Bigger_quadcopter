@@ -167,14 +167,14 @@ First do following connection <br>
 	Subnet mask: 255.255.255.0 <br>
 4. Open any browser and type this address: ```https://192.168.0.254``` <br>
 5. The default username and password are: <br>
-   	Username: admin
-   	password: admin
+   	Username: admin<br>
+   	password: admin<br>
 6. We have kept is as follow: <br>
-   	Username: AeroraptorsWiFi
-   	password: blacksparrow101
+   	Username: AeroraptorsWiFi<br>
+   	password: blacksparrow101<br>
 7. The wireless network is configured as given below: <br>
-	SSID:AeroraptorsWiFi
-	Password: blacksparrow101
+	SSID:AeroraptorsWiFi<br>
+	Password: blacksparrow101<br>
 
 The default ip address to login on webpage is 192.168.0.254 (For more info see at the back of the device)
 [tplinkvid]: https://youtu.be/ISUSlTcgWks
