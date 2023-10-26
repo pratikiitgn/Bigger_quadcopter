@@ -159,6 +159,16 @@ https://phoenixnap.com/kb/raspberry-pi-static-ip
 [better to go with default- make router in AP mode] <br>
 Just follow the steps in this video for AP - [link][tplinkvid]
 
+First do following connection <br>
+1. TP Link router's power cable <-> TP link small module's CPE connector cable <br>
+2. TP link small module's LAN cable <-> Laptop or PC's lab cable <br>
+3. Change the IPv4 address of the ethernet cable as follows <br>
+	IP address: 192.168.0.10 <br>
+	Subnet mask: 255.255.255.0 <br>
+4. Open any browser and type this address: ```https://192.168.0.10```
+
+
+
 The default ip address would be - 192.168.0.254 (For more info see at the back of the device)
 [tplinkvid]: https://youtu.be/ISUSlTcgWks
 We have following username and password of the router <br>
