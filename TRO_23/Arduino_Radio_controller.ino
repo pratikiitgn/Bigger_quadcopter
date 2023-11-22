@@ -1,3 +1,12 @@
+// This is for Arduino mega code
+
+// Channel 1 - Pin 50
+// Channel 2 - Pin 51
+// Channel 3 - Pin 52
+// Channel 4 - Pin 53
+// Channel 5 - Pin 2 
+// Channel 6 - Pin 7
+
 unsigned long timer[5];
 byte last_channel[4];
 int input[4];
