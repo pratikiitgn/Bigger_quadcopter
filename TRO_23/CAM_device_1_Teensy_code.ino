@@ -4,18 +4,18 @@ float phi_p   = 0.0;
 
 // Pin definition
 
-const PROGMEM int CSn1 = 2;   //D2
-const PROGMEM int CLK1 = 3;   //D3
-const PROGMEM int DO1  = 4;   //D4
+const PROGMEM int CSn1 = 2;     //D2
+const PROGMEM int CLK1 = 3;     //D3
+const PROGMEM int DO1  = 4;     //D4
 
-const PROGMEM byte CSn2 = 5;   //D5
-const PROGMEM byte CLK2 = 6;   //D6
-const PROGMEM byte DO2  = 7;   //D7 
+const PROGMEM byte CSn2 = 5;    //D5
+const PROGMEM byte CLK2 = 6;    //D6
+const PROGMEM byte DO2  = 7;    //D7
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial.begin(230400);
+  Serial1.begin(230400);
 
   pinMode(CSn1, OUTPUT);
   pinMode(CLK1, OUTPUT);
