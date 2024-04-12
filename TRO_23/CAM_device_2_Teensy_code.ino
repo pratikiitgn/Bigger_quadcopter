@@ -62,8 +62,8 @@ void readSensor()
   digitalWrite(CSn1, HIGH);
   digitalWrite(CSn2, HIGH);
 
-  int offset_encoder_1 = 2642;
-  int offset_encoder_2 = 2642;
+  int offset_encoder_1 = 1988;
+  int offset_encoder_2 = 1911;
 
 //  String temp1 = String(offset_encoder_1);
 //  Serial.print(dataOut1);
@@ -73,8 +73,8 @@ void readSensor()
   int offsetted_encoder_1 = dataOut1 - offset_encoder_1;   
   int offsetted_encoder_2 = dataOut2 - offset_encoder_2;   
 
-  phi_p   =  (float) (offsetted_encoder_2 * 0.0878906);
-  theta_p = (float) (offsetted_encoder_1 * 0.0878906);
+  theta_p  =  -(float) (offsetted_encoder_2 * 0.0878906);
+  phi_p     = -(float) (offsetted_encoder_1 * 0.0878906);
   Serial.print(phi_p);
   Serial.print(",");
   Serial.println(theta_p);
@@ -87,9 +87,9 @@ void readSensor()
   String temp3 = "," + temp1 + "_" + temp2 + "/";
 //  String temp3 = ",12345_67890/";
   char attitude[14];
-  temp3.toCharArray(attitude, 14);
+//  temp3.toCharArray(attitude, 14);
 //  Serial.println(attitude);
-  Serial1.println(attitude);
+//  Serial1.println(attitude);
 
 }
 
