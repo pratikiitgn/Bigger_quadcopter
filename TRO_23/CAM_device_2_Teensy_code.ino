@@ -14,8 +14,8 @@ const PROGMEM byte DO2  = 7;   //D7
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial1.begin(115200);
+  Serial.begin(230400);
+  Serial1.begin(230400);
 
   pinMode(CSn1, OUTPUT);
   pinMode(CLK1, OUTPUT);
