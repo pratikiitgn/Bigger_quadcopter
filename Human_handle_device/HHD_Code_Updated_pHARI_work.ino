@@ -1,4 +1,4 @@
-#include <Arduino.h>
+//#include <Arduino.h>
 // This demo explores two reports (SH2_ARVR_STABILIZED_RV and SH2_GYRO_INTEGRATED_RV) both can be used to give 
 // quartenion and euler (yaw, pitch roll) angles.  Toggle the FAST_MODE define to see other report.  
 // Note sensorValue.status gives calibration accuracy (which improves over time)
@@ -7,15 +7,6 @@
 // For SPI mode, we need a CS pin
 #define BNO08X_CS 10
 #define BNO08X_INT 9
-
-typedef struct{
-  float roll_payload      = 00.00; // 5 bytes
-  float pitch_payload     = 00.00; // 5 bytes
-  float yaw_payload       = 00.00; // 5 bytes
-  uint8_t accuracy_IMU_   = 0;      // 1 bytes
-  }data;
-
-data qp_data_in_rpy;
 
 // #define FAST_MODE
 //  For SPI mode, we also need a RESET 
@@ -46,10 +37,14 @@ sh2_SensorValue_t sensorValue;
 #endif
 
 
+
+
+
+
 void setReports(sh2_SensorId_t reportType, long report_interval) {
-  Serial.println("Setting desired reports");
+//  Serial.println("Setting desired reports");
   if (! bno08x.enableReport(reportType, report_interval)) {
-    Serial.println("Could not enable stabilized remote vector");
+//    Serial.println("Could not enable stabilized remote vector");
   }
 }
 
@@ -71,6 +66,7 @@ void setup(void) {
 
 
   setReports(reportType, reportIntervalUs);
+  Serial.print(reportType);
 
   Serial.println("Reading events");
   delay(100);
@@ -104,12 +100,17 @@ void quaternionToEulerGI(sh2_GyroIntegratedRV_t* rotational_vector, euler_t* ypr
 
 void loop() {
 
-  if (bno08x.wasReset()) {
-    Serial.print("sensor was reset ");
-    setReports(reportType, reportIntervalUs);
-  }
-  
+//  if (bno08x.wasReset()) {
+//    Serial.print("sensor was reset ");
+//    setReports(reportType, reportIntervalUs);
+//  }
+
+  sh2_SensorId_t reportType = SH2_ARVR_STABILIZED_RV;
+  long reportIntervalUs = 2000;
+  setReports(reportType, reportIntervalUs);
+
   if (bno08x.getSensorEvent(&sensorValue)) {
+    
     // in this demo only one report type will be received depending on FAST_MODE define (above)
     switch (sensorValue.sensorId) {
       case SH2_ARVR_STABILIZED_RV:
@@ -118,74 +119,81 @@ void loop() {
         // faster (more noise?)
         quaternionToEulerGI(&sensorValue.un.gyroIntegratedRV, &ypr, true);
         break;
-      case SH2_ACCELEROMETER:
-        break;
-      case SH2_LINEAR_ACCELERATION:
-//        Serial.print("Linear Acceration - x: ");
-        Serial.print(sensorValue.un.linearAcceleration.x);
-        Serial.print(",");
-        Serial.print(sensorValue.un.linearAcceleration.y);
-        Serial.print(",");
-        Serial.println(sensorValue.un.linearAcceleration.z);
-        break;
+//      case SH2_ACCELEROMETER:
+//        break;
+//      case SH2_LINEAR_ACCELERATION:
+////        Serial.print(sensorValue.un.linearAcceleration.x);
+////        Serial.print(",");
+////        Serial.print(sensorValue.un.linearAcceleration.y);
+////        Serial.print(",");
+////        Serial.println(sensorValue.un.linearAcceleration.z);
+//        break;
     }
-    // static long last = 0;
-//     long now = micros();
-//     Serial.print(now - last);             Serial.print("\t");
-//     last = now;
-    // Serial.print(sensorValue.status);     Serial.print("\t");  // This is accuracy in the range of 0 to 3
-//     Serial.print(ypr.yaw);                Serial.print("\t");
-//     Serial.print(ypr.pitch);              Serial.print("\t");
-//     Serial.println(ypr.roll);
 
-//      Serial.print(ypr.yaw);                Serial.print("\t");
-//      Serial.print(ypr.pitch);              Serial.print("\t");
-//      Serial.println(ypr.roll);
-
-////    Serial.print("Accelerometer - x: ");
-//    Serial.print(sensorValue.un.accelerometer.x);
-//    Serial.print(",");    
-////    Serial.print(" y: ");
-//    Serial.print(sensorValue.un.accelerometer.y);
-//    Serial.print(",");    
-////    Serial.print(" z: ");
-//    Serial.println(sensorValue.un.accelerometer.z);
-
-//    Serial.print("Raw Accelerometer - x: ");
-//    Serial.print(sensorValue.un.rawAccelerometer.x);
+//    Serial.print(ypr.roll);
 //    Serial.print(",");
-////    Serial.print(" y: ");
-//    Serial.print(sensorValue.un.rawAccelerometer.y);
-//    Serial.print(","); 
-////    Serial.print(" z: ");
-//    Serial.println(sensorValue.un.rawAccelerometer.z);
-
-//    Serial.print("Linear Acceration - x: ");
-//    Serial.print(sensorValue.un.linearAcceleration.x);
+//    Serial.print(ypr.pitch);
 //    Serial.print(",");
-////    Serial.print(" y: ");
-//    Serial.print(sensorValue.un.linearAcceleration.y);
+//    Serial.print(ypr.yaw);
 //    Serial.print(",");
-////    Serial.print(" z: ");
-//    Serial.println(sensorValue.un.linearAcceleration.z);
-    
-    int roll_data_scaled    = 500000 + ypr.roll   * 100; // bytes 6
-    int pitch_data_scaled   = 500000 + ypr.pitch  * 100; // bytes 6
-    int yaw_data_scaled     = 500000 + ypr.yaw    * 100; // bytes 6
 
+    int roll_data_scaled    = 500000 + ypr.roll   * 100.0;
+    int pitch_data_scaled   = 500000 + ypr.pitch  * 100.0;
+    int yaw_data_scaled     = 500000 + ypr.yaw    * 100.0;
     String roll_data      = String(roll_data_scaled);
     String pitch_data     = String(pitch_data_scaled);
     String yaw_data       = String(yaw_data_scaled);
 
-    String temp3 = "PAMD_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
-    char payload_attitude[27];
-    temp3.toCharArray(payload_attitude, 27);
-
-
-
+  sh2_SensorId_t reportType = SH2_LINEAR_ACCELERATION;
+  long reportIntervalUs = 5000;
+  setReports(reportType, reportIntervalUs);
     
-//    Serial.println(payload_attitude);
+    switch (sensorValue.sensorId) {
+//      case SH2_LINEAR_ACCELERATION:
+//        break;
+      case SH2_ACCELEROMETER:
+        break;
+      case SH2_LINEAR_ACCELERATION:
+//        Serial.print(sensorValue.un.linearAcceleration.x);
+//        Serial.print(",");
+//        Serial.print(sensorValue.un.linearAcceleration.y);
+//        Serial.print(",");
+//        Serial.println(sensorValue.un.linearAcceleration.z);
+        break;
+    }
 
+//      case SH2_ACCELEROMETER:
+//        break;
+//      case SH2_LINEAR_ACCELERATION:
+////        Serial.print(sensorValue.un.linearAcceleration.x);
+////        Serial.print(",");
+////        Serial.print(sensorValue.un.linearAcceleration.y);
+////        Serial.print(",");
+////        Serial.println(sensorValue.un.linearAcceleration.z);
+//        break;
+
+//    Serial.print(sensorValue.un.linearAcceleration.x);
+//    Serial.print(",");
+//    Serial.print(sensorValue.un.linearAcceleration.y);
+//    Serial.print(",");
+//    Serial.println(sensorValue.un.linearAcceleration.z);
+
+    int x_local_acceleration_scaled = 500000 + sensorValue.un.linearAcceleration.x   * 100.0;
+    int y_local_acceleration_scaled = 500000 + sensorValue.un.linearAcceleration.y   * 100.0;
+    int z_local_acceleration_scaled = 500000 + sensorValue.un.linearAcceleration.z   * 100.0;
+
+    String x_local_acceleration_data    = String(x_local_acceleration_scaled);
+    String y_local_acceleration_data    = String(y_local_acceleration_scaled);
+    String z_local_acceleration_data    = String(z_local_acceleration_scaled);
+
+//    String temp3 = "PAMD_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
+//                      5    +     6     +  1  +     6      +  1  +     6    +  1 = 5+ (18) + 3 = 26
+
+    String temp3 = "HDD_" + x_local_acceleration_data + "_" + y_local_acceleration_data + "_" + z_local_acceleration_data + "_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
+//                   5    +             6             +  1  +             6             +  1  +              6            +  1  +     6      + 1  +      6     +  1  +   6      +  1
+     char HHD_data[48];
+    temp3.toCharArray(HHD_data, 48);
+    Serial.println(HHD_data);
   }
 
 }
