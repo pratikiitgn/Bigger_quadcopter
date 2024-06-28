@@ -51,6 +51,7 @@ void setReports(sh2_SensorId_t reportType, long report_interval) {
 void setup(void) {
 
   Serial.begin(2000000);
+  Serial1.begin(2000000);
   while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
 
   Serial.println("Adafruit BNO08x test!");
@@ -189,11 +190,12 @@ void loop() {
 //    String temp3 = "PAMD_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
 //                      5    +     6     +  1  +     6      +  1  +     6    +  1 = 5+ (18) + 3 = 26
 
-    String temp3 = "HDD_" + x_local_acceleration_data + "_" + y_local_acceleration_data + "_" + z_local_acceleration_data + "_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
-//                   5    +             6             +  1  +             6             +  1  +              6            +  1  +     6      + 1  +      6     +  1  +   6      +  1
-     char HHD_data[48];
-    temp3.toCharArray(HHD_data, 48);
+    String temp3 = "," + x_local_acceleration_data + "_" + y_local_acceleration_data + "_" + z_local_acceleration_data + "_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
+//                   1    +             6             +  1  +             6             +  1  +              6            +  1  +     6      + 1  +      6     +  1  +   6      +  1 + extra byte
+     char HHD_data[44];
+    temp3.toCharArray(HHD_data, 44);
     Serial.println(HHD_data);
+    Serial1.println(HHD_data);
   }
 
 }
