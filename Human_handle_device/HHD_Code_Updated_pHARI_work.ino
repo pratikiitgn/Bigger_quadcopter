@@ -50,9 +50,12 @@ void setReports(sh2_SensorId_t reportType, long report_interval) {
 
 void setup(void) {
 
-  Serial.begin(2000000);
-  Serial1.begin(2000000);
-  while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
+  Serial.begin(230400);
+  Serial1.begin(230400);
+
+  delay(2000);
+  
+//  while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
 
   Serial.println("Adafruit BNO08x test!");
 
