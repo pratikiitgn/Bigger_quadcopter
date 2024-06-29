@@ -131,10 +131,10 @@ void loop() {
     String yaw_data       = String(yaw_data_scaled);
 
     String temp3 = "," + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
-//                    1  +     6     +  1  +     6      +  1  +     6    +  1 = 1 + 18 + 3 + 1 = 25
+//                  1  +     6     +  1  +     6      +  1  +     6    +  1 = 23
 
-    char HHD_data[25];
-    temp3.toCharArray(HHD_data, 25);
+    char HHD_data[23];
+    temp3.toCharArray(HHD_data, 23);
     Serial.println(HHD_data);
     Serial1.println(HHD_data);
 
