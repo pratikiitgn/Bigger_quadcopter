@@ -180,8 +180,6 @@ void loop() {
 //    String y_local_acceleration_data    = String(y_local_acceleration_scaled);
 //    String z_local_acceleration_data    = String(z_local_acceleration_scaled);
 
-
-
 //    String temp3 = "," + x_local_acceleration_data + "_" + y_local_acceleration_data + "_" + z_local_acceleration_data + "_" + roll_data + "_" + pitch_data + "_" + yaw_data + "/";
 //                   1    +             6             +  1  +             6             +  1  +              6            +  1  +     6      + 1  +      6     +  1  +   6      +  1 + extra byte
 //     char HHD_data[44];
