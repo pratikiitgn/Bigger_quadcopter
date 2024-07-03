@@ -88,22 +88,26 @@ if (analog_read < 500 ){
 //  Serial.print(",");
 //  Serial.println(arm_or_disarm);
 
-  int offset_encoder_1 = 2256;
-  int offset_encoder_2 = 2550;
+  int offset_encoder_1 = 1768;
+  int offset_encoder_2 = 1915;
 
   int offsetted_encoder_1 = dataOut1 - offset_encoder_1;   
   int offsetted_encoder_2 = dataOut2 - offset_encoder_2;   
 //  Serial.println(offsetted_encoder_1);
-  
+
   phi_p   = (float) (offsetted_encoder_2 * 0.0878906);
   theta_p = (float) (-offsetted_encoder_1 * 0.0878906);
-  
+
+//  Serial.print(offsetted_encoder_1);
+//  Serial.print(",");
+//  Serial.println(offsetted_encoder_2);
+
 //  Serial.print(phi_p);
 //  Serial.print(",");
 //  Serial.println(theta_p);
 
-  int phi_p_scaled    = 50000 + (phi_p*100);
-  int theta_p_scaled  = 50000 + (theta_p*100);
+  int phi_p_scaled    = 50000 - (phi_p*100);
+  int theta_p_scaled  = 50000 - (theta_p*100);
 
   String temp1 = String(phi_p_scaled);
   String temp2 = String(theta_p_scaled);
